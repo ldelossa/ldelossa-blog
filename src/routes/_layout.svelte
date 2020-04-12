@@ -15,16 +15,12 @@
 <style>
     layout {
         display: grid;
-        grid-template-columns: minmax(300px, 1fr) 4fr;
-        grid-template-rows: minmax(550px, auto);
-
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto;
         grid-template-areas:
             "sidebar content";
-    }
-    .item {
-        background: grey;
-        color: white;
-        padding: 10px;
     }
 </style>
 

@@ -15,40 +15,28 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        background: #28536b;
-        min-height: 700px;
-        height: 100vh;
-        width: auto;
         -moz-box-shadow:    0px 0px 5px 6px #ccc;
         -webkit-box-shadow: 0px 0px 5px 6px #ccc;
         box-shadow:         0px 0px 5px 6px #ccc;
-        margin-right: 1em;
-        border-right: 3px outset black;
+        margin-right: 1vmin;
+        border-right: 4px outset black;
+        background: #28536b;
     }
     avatar-wrapper {
-        margin-top: 5em;
+        margin-top: 8vmin;
     }
     .avatar {
         border-radius: 25%;
         border: 2px solid #f6f0ed;
-        margin: 0 auto;
+        margin: auto;
     }
     author-wrapper {
-        margin: 2rem 1rem 1rem 1rem;
+        margin: 4vmin 1vmin 4vmin 1vmin;
     }
     .author {
         text-align: center;
-        font-size: xx-large;
+        font-size: 2rem;
         color: #e9f1f7;
-        font-family: 'Baloo Paaji 2', cursive;
-    }
-    blurb-wrapper {
-        margin: 2rem 1rem 2rem 1rem;
-    }
-    .blurb {
-        text-align: center;
-        color: #c2948a;
-        font-size: large;
         font-family: 'Baloo Paaji 2', cursive;
     }
     nav {
@@ -58,22 +46,22 @@
         margin: 4vmin 4vmin 6vmin 4vmin;
         flex-wrap: wrap;
     }
+    console-wrapper {
+        margin: 1vmin 2vmin 1vmin 2vmin;
+    }
     icons-wrapper {
-        margin-top: 3vmin;
+        margin-top: 4vmin;
     }
     @media screen and (max-height: 750px) {
+        author-wrapper {
+            margin: 0vmin 1vmin 0vmin 1vmin;
+        }
         icons-wrapper{
             margin: 0;
         }
         nav {
             flex-direction: row;
         }
-    }
-    pre code {
-        border-radius: 3%;
-        padding: 5px;
-        margin: 0 2rem 0 2rem;
-        display: block;
     }
 </style>
 
@@ -84,7 +72,9 @@
     <author-wrapper>
         <p class="author">{author}<p>
     </author-wrapper>
-    <Console/>
+    <console-wrapper>
+        <Console/>
+    </console-wrapper>
     <nav>
         <SidebarItem name="about" href="about"/>
         <SidebarItem name="projects" href="projects"/>
