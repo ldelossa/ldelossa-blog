@@ -52,20 +52,43 @@
     icons-wrapper {
         margin-top: 4vmin;
     }
-    @media screen and (max-height: 750px) {
-        author-wrapper {
-            margin: 0vmin 1vmin 0vmin 1vmin;
+    /* hide everthing except for nav */
+    @media screen and (max-width: 600px) {
+        sidebar {
+            /* resets */
+            display: initial;
+            flex-direction: initial;
+            justify-content: initial;
+            -moz-box-shadow:    initial;
+            -webkit-box-shadow: initial;
+            box-shadow:         initial;
+            margin-right: initial;
+            border-right: initial;
+
+            /*addition*/
+            margin-bottom: 1vmin;
         }
-        icons-wrapper{
-            margin: 0;
+        avatar-wrapper {
+            display: none;
+        }
+        author-wrapper {
+            display: none;
+        }
+        console-wrapper {
+            display: none;
+        }
+        icons-wrapper {
+            display: none;
+            margin-top: initial;
         }
         nav {
             flex-direction: row;
+            margin: initial;
         }
     }
 </style>
 
-<sidebar>
+<sidebar >
     <avatar-wrapper>
         <img class="avatar" src={avatar_url}>
     </avatar-wrapper>

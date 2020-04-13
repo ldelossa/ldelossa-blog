@@ -17,10 +17,21 @@
         display: grid;
         height: 100vh;
         width: 100vw;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 8fr;
         grid-template-rows: auto;
         grid-template-areas:
             "sidebar content";
+    }
+    /* change grid to stacked */
+    @media screen and (max-width: 600px) {
+        layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 10fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            grid-template-areas: "";
+        }
     }
 </style>
 
