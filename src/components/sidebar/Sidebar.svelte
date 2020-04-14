@@ -12,6 +12,8 @@
 
 <style>
     sidebar {
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -23,6 +25,8 @@
         background: #28536b;
     }
     avatar-wrapper {
+        display: flex;
+        justify-content: center;
         margin-top: 8vmin;
     }
     .avatar {
@@ -56,34 +60,11 @@
     @media screen and (max-width: 600px) {
         sidebar {
             /* resets */
-            display: initial;
-            flex-direction: initial;
-            justify-content: initial;
             -moz-box-shadow:    initial;
             -webkit-box-shadow: initial;
             box-shadow:         initial;
             margin-right: initial;
             border-right: initial;
-
-            /*addition*/
-            margin-bottom: 1vmin;
-        }
-        avatar-wrapper {
-            display: none;
-        }
-        author-wrapper {
-            display: none;
-        }
-        console-wrapper {
-            display: none;
-        }
-        icons-wrapper {
-            display: none;
-            margin-top: initial;
-        }
-        nav {
-            flex-direction: row;
-            margin: initial;
         }
     }
 </style>
