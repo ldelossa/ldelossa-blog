@@ -1,6 +1,7 @@
 <script>
     import Sidebar from "../components/sidebar/Sidebar.svelte";
-	import { fly } from 'svelte/transition';
+	import { fly, fade, slide } from 'svelte/transition';
+    import {quintOut} from 'svelte/easing';
 
     let avatar_url = "https://media-exp1.licdn.com/dms/image/C5103AQES1N5l8DdVNg/profile-displayphoto-shrink_100_100/0?e=1591833600&v=beta&t=Z7oDXMDPRT6elj2WSGu9ZJ__j03CkbzC-ZB9ok75tuk";
     let author = "Louis DeLosSantos";
@@ -9,7 +10,14 @@
     let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
     let twitter_url = "https://twitter.com/ldelossa_ld";
 
+    let toggleChars = {
+        double: '⇔',
+        left: '⇐',
+        right: '⇒'
+    }
+
     let visible = true;
+    let toggle = visible ? toggleChars.left : toggleChars.right
     function toggleVisible() {
         visible = !visible;
     }
@@ -32,6 +40,9 @@
         height: 100%;
         width: 100%;
     }
+    header-wrapper {
+        display: none;
+    }
     .sb-toggle-button-open {
         display: inline;
         z-index: 100;
@@ -39,7 +50,7 @@
         background-color: Transparent;
         border: none;
         background-color: inherit;
-        padding: 14px 28px;
+        padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
         color: #28536b;
@@ -54,7 +65,7 @@
         background-color: Transparent;
         border: none;
         background-color: inherit;
-        padding: 14px 28px;
+        padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
         color: #28536b;
@@ -70,25 +81,29 @@
         layout {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
+            grid-template-rows: 1fr 8fr;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             grid-area:
+                "header"
                 "content";
         }
-        .sb-toggle-button-open {
-            color: #e9f1f7;
-            font-family: 'Baloo Paaji 2', cursive;
-        }
         /* make these overlap */
-        sidebar-wrapper {
+        header-wrapper {
+            display: flex;
+            justify-content: flex-end;
             grid-column: 1 / 2;
             grid-row: 1 / 2;
+            z-index: 3;
+        }
+        sidebar-wrapper {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
             z-index: 2;
         }
         content-wrapper {
             grid-column: 1 / 2;
-            grid-row: 1 / 2;
+            grid-row: 2 / 3;
             z-index: 1;
         }
     }
@@ -97,11 +112,16 @@
         class:sb-toggle-button-open="{visible === true}"
         class:sb-toggle-button-closed="{visible === false}"
         on:click={toggleVisible}>
-        {visible ? '<--' : '-->'}
+        {toggle}
 </button>
 <layout>
     {#if visible}
-    <sidebar-wrapper transition:fly="{{ x: -200, duration: 200 }}">
+        <sidebar-wrapper transition:fly="{{ delay: 100, duration: 250, x: -200, easing: quintOut, opacity: 100 }}"
+                         on:introstart="{() => visible ? toggle = toggleChars.double : toggle = toggleChars.left}"
+                         on:introend="{() => visible ? toggle = toggleChars.left : toggle = toggleChars.double}"
+                         on:outrostart="{() => toggle = toggleChars.double}"
+                         on:outroend="{() => toggle = toggleChars.right}"
+                         >
         <Sidebar 
             avatar_url={avatar_url}
             author={author}

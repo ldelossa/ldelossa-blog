@@ -17,21 +17,22 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        -moz-box-shadow:    0px 0px 5px 6px #ccc;
-        -webkit-box-shadow: 0px 0px 5px 6px #ccc;
-        box-shadow:         0px 0px 5px 6px #ccc;
+        /* -moz-box-shadow:    0px 0px 5px 6px #ccc; */
+        /* -webkit-box-shadow: 0px 0px 5px 6px #ccc; */
+        /* box-shadow:         0px 0px 5px 6px #ccc; */
         margin-right: 1vmin;
-        border-right: 4px outset black;
-        background: #28536b;
+        /* border-right: 4px outset black; */
+        background: #567db0;
     }
     avatar-wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 8vmin;
+        background: #f6efed;
+        padding: 34px 0px 34px 0px;
     }
     .avatar {
-        border-radius: 25%;
-        border: 2px solid #f6f0ed;
+        border-radius: 45%;
+        border: 2px solid #344c6c;
         margin: auto;
     }
     author-wrapper {
@@ -40,7 +41,7 @@
     .author {
         text-align: center;
         font-size: 2rem;
-        color: #e9f1f7;
+        color: #f6efed;
         font-family: 'Baloo Paaji 2', cursive;
     }
     nav {
