@@ -66,6 +66,9 @@
             margin-right: initial;
             border-right: initial;
         }
+        nav {
+            flex-direction: row;
+        }
     }
 </style>
 

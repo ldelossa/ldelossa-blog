@@ -32,8 +32,33 @@
         height: 100%;
         width: 100%;
     }
-    #sb-toggle-button {
-        display: none;
+    .sb-toggle-button-open {
+        display: inline;
+        z-index: 100;
+        outline: none;
+        background-color: Transparent;
+        border: none;
+        background-color: inherit;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #28536b;
+        font-family: 'Baloo Paaji 2', cursive;
+        position: absolute;
+        right: 0%;
+    }
+    .sb-toggle-button-closed {
+        display: inline;
+        z-index: 100;
+        outline: none;
+        background-color: Transparent;
+        border: none;
+        background-color: inherit;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #28536b;
+        font-family: 'Baloo Paaji 2', cursive;
         position: absolute;
         right: 0%;
     }
@@ -51,9 +76,9 @@
             grid-area:
                 "content";
         }
-        #sb-toggle-button {
-            display: inline;
-            z-index: 100;
+        .sb-toggle-button-open {
+            color: #e9f1f7;
+            font-family: 'Baloo Paaji 2', cursive;
         }
         /* make these overlap */
         sidebar-wrapper {
@@ -68,9 +93,11 @@
         }
     }
 </style>
-
-<button id="sb-toggle-button" on:click={toggleVisible}>
-    sidebar
+<button 
+        class:sb-toggle-button-open="{visible === true}"
+        class:sb-toggle-button-closed="{visible === false}"
+        on:click={toggleVisible}>
+        {visible ? '<--' : '-->'}
 </button>
 <layout>
     {#if visible}
