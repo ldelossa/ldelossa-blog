@@ -10,14 +10,14 @@
     let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
     let twitter_url = "https://twitter.com/ldelossa_ld";
 
+    let visible = true;
     let toggleChars = {
         double: '⇔',
         left: '⇐',
         right: '⇒'
     }
-
-    let visible = true;
     let toggle = visible ? toggleChars.left : toggleChars.right
+
     function toggleVisible() {
         visible = !visible;
     }
@@ -43,9 +43,17 @@
     sidebar-wrapper {
         height: 100%;
         width: 100%;
+        grid-area: 1 / 1 / 2 / 2
     }
-    header-wrapper {
-        display: none;
+    content-wrapper {
+        height: 100%;
+        width: 100%;
+        grid-area: 1 / 2 / 2 / 3
+    }
+    .content-wrapper-full {
+        height: 100%;
+        width: 100%;
+        grid-area: 1 / 1 / 2 / 3
     }
     .sb-toggle-button-open {
         display: inline;
@@ -77,10 +85,6 @@
         position: absolute;
         right: 0%;
     }
-    content-wrapper {
-        height: 100%;
-        width: 100%;
-    }
     @media screen and (max-width: 600px) {
         layout {
             display: grid;
@@ -92,20 +96,17 @@
                 "header"
                 "content";
         }
-        /* make these overlap */
-        header-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            z-index: 3;
-        }
         sidebar-wrapper {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
             z-index: 2;
         }
         content-wrapper {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            z-index: 1;
+        }
+        .content-wrapper-full {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
             z-index: 1;
@@ -137,7 +138,8 @@
              /> 
     </sidebar-wrapper>
     {/if}
-    <content-wrapper>
+    <content-wrapper
+        class:content-wrapper-full="{!visible}">
         <slot></slot>
     </content-wrapper>
 </layout>
