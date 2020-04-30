@@ -11,7 +11,7 @@
     }
     .button-ref {
         text-decoration: underline;
-        font-size: 2.5vmin;
+        font-size: 30px;
         color: #e9f1f7;
         font-family: 'Baloo Paaji 2', cursive;
     }

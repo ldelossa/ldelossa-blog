@@ -12,8 +12,8 @@
         flex-wrap: wrap;
     } 
     img {
-        width: 3vw;
-        height: 3vh;
+        width: 30px;
+        height: 30px;
     }
 </style>
 
