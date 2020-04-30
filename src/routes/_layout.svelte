@@ -21,6 +21,10 @@
     function toggleVisible() {
         visible = !visible;
     }
+
+    function handleNavClick(event){
+            visible = false
+    }
 </script>
 
 <svelte:head>
@@ -123,6 +127,7 @@
                          on:outroend="{() => toggle = toggleChars.right}"
                          >
         <Sidebar 
+            on:navitemclick={handleNavClick}
             avatar_url={avatar_url}
             author={author}
             blurb={blurb}

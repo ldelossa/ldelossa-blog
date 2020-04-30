@@ -84,9 +84,9 @@
         <Console/>
     </console-wrapper>
     <nav>
-        <SidebarItem name="about" href="about"/>
-        <SidebarItem name="projects" href="projects"/>
-        <SidebarItem name="blog" href="blog"/>
+        <SidebarItem on:navitemclick name="about" href="about"/>
+        <SidebarItem on:navitemclick name="projects" href="projects"/>
+        <SidebarItem on:navitemclick name="blog" href="blog"/>
     </nav>
     <icons-wrapper>
         <Icons github_url={github_url} 
