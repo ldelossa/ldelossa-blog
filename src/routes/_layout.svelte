@@ -3,7 +3,7 @@
 	import { fly, fade, slide } from 'svelte/transition';
     import {quintOut} from 'svelte/easing';
 
-    let avatar_url = "https://media-exp1.licdn.com/dms/image/C5103AQES1N5l8DdVNg/profile-displayphoto-shrink_100_100/0?e=1591833600&v=beta&t=Z7oDXMDPRT6elj2WSGu9ZJ__j03CkbzC-ZB9ok75tuk";
+    let avatar_url = "https://avatars3.githubusercontent.com/u/5642902?s=460&u=06352b1f80c7b5e42da67189907b35cdd1586772&v=4";
     let author = "Louis DeLosSantos";
     let blurb = "Software, Hardware, Music, Linux";
     let github_url = "https://github.com/ldelossa";
@@ -35,7 +35,7 @@
         display: grid;
         height: 100vh;
         width: 100vw;
-        grid-template-columns: 1fr 8fr;
+        grid-template-columns: 1.5fr 8fr;
         grid-template-rows: auto;
         grid-template-areas:
             "sidebar content";
@@ -43,12 +43,12 @@
     sidebar-wrapper {
         height: 100%;
         width: 100%;
-        grid-area: 1 / 1 / 2 / 2
+        grid-area: 1 / 1 / 2 / 2;
     }
     content-wrapper {
         height: 100%;
         width: 100%;
-        grid-area: 1 / 2 / 2 / 3
+        grid-area: 1 / 2 / 2 / 3;
     }
     .content-wrapper-full {
         height: 100%;
@@ -63,7 +63,7 @@
         border: none;
         background-color: inherit;
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 50px;
         cursor: pointer;
         color: #28536b;
         font-family: 'Baloo Paaji 2', cursive;
@@ -78,7 +78,7 @@
         border: none;
         background-color: inherit;
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 50px;
         cursor: pointer;
         color: #28536b;
         font-family: 'Baloo Paaji 2', cursive;
