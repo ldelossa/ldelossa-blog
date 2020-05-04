@@ -12,7 +12,6 @@
         height: 100%;
         width: 100%;
     } 
-
     card {
       box-shadow: 0 4px 8px 0 rgba(150,150,150,0.5);
       border-radius: 10px;
@@ -21,9 +20,23 @@
       width: 50%;
       margin: 50px;
       background: white;
-      overflow: hidden;
+      overflow: scroll;
     }
     card:hover {
+      box-shadow: 0 8px 16px 0 rgba(255,250,250,0.7);
+    }
+
+    hideable-card {
+      box-shadow: 0 4px 8px 0 rgba(150,150,150,0.5);
+      border-radius: 10px;
+      transition: 0.3s;
+      height: 75%;
+      width: 50%;
+      margin: 50px;
+      background: white;
+      overflow: scroll;
+    }
+    hideable-card:hover {
       box-shadow: 0 8px 16px 0 rgba(255,250,250,0.7);
     }
 
@@ -34,7 +47,6 @@
       text-align: center;
       padding: 50px;
     }
-
     .about-blurb {
       font-family: 'Source Code Pro', monospace;
       color: #4b6777;
@@ -42,14 +54,12 @@
       text-align: center;
       padding: 40px;
     }
-
     hr {
         border: 0;
         height: 1px;
         background: #333;
         background-image: linear-gradient(to right, #ccc, #333, #ccc);
     }
-
     blurb-wrapper {
         display: flex;
         flex-direction: column;
@@ -58,28 +68,24 @@
         height: 100%;
         width: 100%;
     }
-
     resume-wrapper {
         height: 100%;
         width: 50%;
     }
-
     icons {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     } 
-
     img {
         width: min(2vmin, 30px);
         height: min(2vmin, 30px);
         color: #4b6777;
     }
-    
     @media screen and (max-width: 600px) {
         about-wrapper {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background: #2c2c2c; 
@@ -93,6 +99,9 @@
           width: 75%;
           margin: 10px;
           background: white;
+        }
+        hideable-card {
+            display: none;
         }
     }
 </style>
@@ -140,8 +149,8 @@
             </div>
         </blurb-wrapper>
     </card>
-    <card>
+    <hideable-card>
         <iframe overflow=hidden height=100% width=100% src="https://docs.google.com/document/d/e/2PACX-1vTKxQE0Yg0pEoWorCtNFoSQxjvX2Jv0P588hXMhxw-Wy4jqtCa6Qk5pWCVaPJcPV3HToIvEQ8kUeYBM/pub?embedded=true"></iframe>
-    </card>
+    </hideable-card>
 </about-wrapper>
 

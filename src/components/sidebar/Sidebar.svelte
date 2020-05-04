@@ -31,20 +31,18 @@
         /* margin-right: 1vmin; */
         background: #4b6777; 
     }
-
     avatar-wrapper {
         display: flex;
         grid-area: avatar;
         background: #c1432e; 
     }
     .avatar {
-        height: 40%;
-        width: 40%;
+        height: 85px;
+        width: 85px;
         border-radius: 35%;
         border: 2px solid white;
         margin: auto;
     }
-
     author-wrapper {
         display: flex;
         flex-direction: column;
@@ -58,7 +56,6 @@
         color: white;
         font-family: 'Baloo Paaji 2', cursive;
     }
-
     nav {
         grid-area: navigation;
         display: flex;
@@ -66,7 +63,6 @@
         justify-content: space-around;
         flex-wrap: wrap;
     }
-
     icons-wrapper {
         display: flex;
         grid-area: icons;
@@ -74,7 +70,6 @@
         justify-content: flex-end;
         padding: 20px;
     }
-
     hr {
         border: 0;
         height: 1px;
