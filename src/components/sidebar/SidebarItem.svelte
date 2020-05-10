@@ -8,8 +8,8 @@
         })
     }
 
-    export let name
-    export let href
+    export let name;
+    export let href;
 </script>
 
 <style>

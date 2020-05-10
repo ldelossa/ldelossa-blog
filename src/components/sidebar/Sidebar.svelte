@@ -1,19 +1,13 @@
 <script>
-    import Console from "./Console.svelte"
-    import SidebarItem from "./SidebarItem.svelte"
-    import Icons from "./Icons.svelte"
+    import Console from "./Console.svelte";
+    import SidebarItem from "./SidebarItem.svelte";
+    import Icons from "./Icons.svelte";
     export let avatar_url;
     export let github_url;
     export let linkedin_url;
     export let twitter_url;
     export let author;
     export let blurb;
-
-    let colors = {
-        khaki: '#e6dbc9',
-        grey: '#2e3830',
-        red: '#c53211'
-    }
 </script>
 
 <style>
@@ -28,19 +22,19 @@
             "author"
             "navigation"
             "icons";
-        /* margin-right: 1vmin; */
+        margin-right: 1vmin;
         background: #4b6777; 
     }
     avatar-wrapper {
         display: flex;
         grid-area: avatar;
-        background: #c1432e; 
+        background: #f7c331; 
     }
     .avatar {
         height: 85px;
         width: 85px;
         border-radius: 35%;
-        border: 2px solid white;
+        border: 5px solid white;
         margin: auto;
     }
     author-wrapper {
@@ -114,6 +108,7 @@
     </author-wrapper>
     <nav>
         <SidebarItem on:navitemclick name="about" href="about"/>
+        <SidebarItem on:navitemclick name="resume" href="resume"/>
         <SidebarItem on:navitemclick name="projects" href="projects"/>
         <SidebarItem on:navitemclick name="blog" href="blog"/>
     </nav>

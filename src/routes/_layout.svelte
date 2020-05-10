@@ -65,7 +65,7 @@
         padding: 10px 20px;
         font-size: 50px;
         cursor: pointer;
-        color: #28536b;
+        color: #4b6777;
         font-family: 'Baloo Paaji 2', cursive;
         position: absolute;
         right: 0%;
@@ -80,7 +80,7 @@
         padding: 10px 20px;
         font-size: 50px;
         cursor: pointer;
-        color: #28536b;
+        color: #4b6777;
         font-family: 'Baloo Paaji 2', cursive;
         position: absolute;
         right: 0%;
@@ -102,21 +102,18 @@
             font-size: 30px;
         }
         sidebar-wrapper {
-            grid-area: content;
-            /* grid-column: 1 / 2; */
-            /* grid-row: 2 / 3; */
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
             z-index: 2;
         }
         content-wrapper {
-            grid-area: content;
-            /* grid-column: 1 / 2; */
-            /* grid-row: 2 / 3; */
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
             z-index: 1;
         }
         .content-wrapper-full {
-            grid-area: content;
-            /* grid-column: 1 / 2; */
-            /* grid-row: 2 / 3; */
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
             z-index: 1;
         }
     }
