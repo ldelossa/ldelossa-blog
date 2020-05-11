@@ -108,7 +108,7 @@
         </location-wrapper>
         <p class=blurb>
             I'm a technologist who writes a lot of Go code,
-            makes music ocassionaly, and works at Red Hat.
+            makes music occasionally, and works at Red Hat.
         </p>
     </text-area>
 </card-layout>
