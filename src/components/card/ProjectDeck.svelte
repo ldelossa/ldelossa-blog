@@ -39,13 +39,13 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         font-family: 'Muli', sans-serif;
-        font-size: 1.3rem;
+        font-size: 3vmin;
     }
     project-name {
         letter-spacing: 1px;
         margin: 20px;
         font-family: 'Muli', sans-serif;
-        font-size: 3rem;
+        font-size: 5vmin;
     }
     project-summary-wrapper {
         display: flex;
@@ -59,7 +59,7 @@
         opacity: 0.6;
         margin: 20px;
         font-family: 'Muli', sans-serif;
-        font-size: 2rem;
+        font-size: 3vmin;
     }
 </style>
 

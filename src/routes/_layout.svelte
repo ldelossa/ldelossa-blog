@@ -49,6 +49,7 @@
         height: 100%;
         width: 100%;
         grid-area: 1 / 2 / 2 / 3;
+        overflow-y: auto;
     }
     .content-wrapper-full {
         height: 100%;
@@ -56,7 +57,7 @@
         grid-area: 1 / 1 / 2 / 3
     }
     .sb-toggle-button-open {
-        display: inline;
+        display: fixed;
         z-index: 100;
         outline: none;
         background-color: Transparent;
@@ -65,7 +66,7 @@
         padding: 10px 20px;
         font-size: 50px;
         cursor: pointer;
-        color: #4b6777;
+        color: #96897b;
         font-family: 'Baloo Paaji 2', cursive;
         position: absolute;
         right: 0%;
@@ -96,10 +97,10 @@
                 "content";
         }
         .sb-toggle-button-open {
-            font-size: 30px;
+            font-size: 40px;
         }
         .sb-toggle-button-closed {
-            font-size: 30px;
+            font-size: 40px;
         }
         sidebar-wrapper {
             grid-column: 1 / 2;

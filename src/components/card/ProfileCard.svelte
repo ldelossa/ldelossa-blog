@@ -1,8 +1,12 @@
 <script>
+    import Icons from "../sidebar/Icons.svelte";
 
     export let title = '';
     export let blurb = '';
     export let avatar_url;
+    let github_url = "https://github.com/ldelossa";
+    let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
+    let twitter_url = "https://twitter.com/ldelossa_ld";
 </script>
 
 <style>
@@ -28,15 +32,12 @@
         grid-row: 1 / 3;
         z-index: 3;
         border-radius: 50%;
-        -webkit-box-shadow: 10px 14px 23px -3px rgba(215,219,90,1);
-        -moz-box-shadow: 10px 14px 23px -3px rgba(215,219,90,1);
-        box-shadow: 10px 14px 23px -3px rgba(215,219,90,1);
     }
     .avatar-img {
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        border: 5px solid #f7c331;
+        border: 5px solid #96897b;
     }
     content {
         height: auto;
@@ -46,6 +47,7 @@
         z-index: 1;
         background: white;
         border-radius: 5%;
+        border: 5px solid #96897b;
     }
     text-area {
         text-align: center;
@@ -58,6 +60,7 @@
         background: white;
         border-radius: 5%;
         margin: 20px;
+        color: #2f2f2f;
     }
     location-wrapper{
         display: flex;
@@ -66,28 +69,26 @@
         align-content: center;
     }
     .author {
-      font-family: 'Source Code Pro', monospace;
+      font-family: 'Muli', sans-serif;
+      letter-spacing: 1px;
       font-size: 3.5vmin;
       padding: 15px;
     }
     .title {
-      font-family: 'Source Code Pro', monospace;
+      font-family: 'Muli', sans-serif;
+      letter-spacing: 1px;
       font-size: 2.5vmin;
       padding: 15px;
     }
     .blurb {
-      font-family: 'Source Code Pro', monospace;
+      font-family: 'Muli', sans-serif;
+      letter-spacing: 1px;
       font-size: 2.5vmin;
       margin: 10vmin;
     }
     .icon-img {
         height: auto;
         width: 24px;
-    }
-    icon-area {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
     }
 </style>
 
@@ -108,5 +109,8 @@
             I'm a technologist who writes a lot of Go code,
             makes music occasionally, and works at Red Hat.
         </p>
+        <Icons github_url={github_url} 
+               linkedin_url={linkedin_url}
+               twitter_url={twitter_url}/>
     </text-area>
 </card-layout>

@@ -13,7 +13,7 @@
 <div>
     <pre>
         <code>
-❯ tree ldelossa 
+❯ tree ./ldelossa 
 ├── hardware
 ├── linux
 ├── music

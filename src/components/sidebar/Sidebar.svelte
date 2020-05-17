@@ -16,26 +16,13 @@
         height: 100%;
         width: 100%;
         grid-template-columns: 100fr;
-        grid-template-rows: 4fr 3fr 11fr 2fr;
+        grid-template-rows: 3fr 11fr 2fr;
         grid-template-areas:
-            "avatar"
             "author"
             "navigation"
             "icons";
         margin-right: 1vmin;
         background: #4b6777; 
-    }
-    avatar-wrapper {
-        display: flex;
-        grid-area: avatar;
-        background: #f7c331; 
-    }
-    .avatar {
-        height: 85px;
-        width: 85px;
-        border-radius: 35%;
-        border: 5px solid white;
-        margin: auto;
     }
     author-wrapper {
         display: flex;
@@ -50,6 +37,9 @@
         color: white;
         font-family: 'Muli', sans-serif;
         letter-spacing: 1px;
+    }
+    console-wrapper {
+        margin: 20px;
     }
     nav {
         grid-area: navigation;
@@ -83,9 +73,6 @@
             border-right: initial;
             grid-template-rows: 2fr 2fr 1fr 1fr;
         }
-        nav {
-            flex-direction: row;
-        }
         icons-wrapper {
             display: flex;
             grid-area: icons;
@@ -98,9 +85,6 @@
 
 
 <sidebar >
-    <avatar-wrapper>
-        <img class="avatar" src={avatar_url}>
-    </avatar-wrapper>
     <author-wrapper>
         <p class="author">{author}<p>
         <console-wrapper>
