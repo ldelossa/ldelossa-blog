@@ -3,8 +3,6 @@
     export let title = '';
     export let blurb = '';
     export let avatar_url;
-    let open = true;
-    let closeCard = () => { open = false };
 </script>
 
 <style>

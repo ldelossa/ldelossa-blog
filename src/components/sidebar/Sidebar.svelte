@@ -48,7 +48,8 @@
         text-align: center;
         font-size: 2rem;
         color: white;
-        font-family: 'Baloo Paaji 2', cursive;
+        font-family: 'Muli', sans-serif;
+        letter-spacing: 1px;
     }
     nav {
         grid-area: navigation;

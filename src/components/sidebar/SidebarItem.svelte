@@ -22,7 +22,8 @@
         text-decoration: underline;
         font-size: 30px;
         color: #e9f1f7;
-        font-family: 'Baloo Paaji 2', cursive;
+        font-family: 'Muli', sans-serif;
+        letter-spacing: 1px;
     }
 </style>
 
