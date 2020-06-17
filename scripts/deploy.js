@@ -3,8 +3,7 @@ const ghpages = require('gh-pages');
 ghpages.publish(
     '__sapper__/export',
     {
-        branch: 'master',
-        repo: 'ldelossa-blog.git',
+        repo: 'git@github.com:ldelossa/ldelossa-blog.git',
         user: {
             name: 'ldelossa',
             email: 'louis.delos@gmail.com'
