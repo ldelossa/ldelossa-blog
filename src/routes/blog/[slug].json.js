@@ -3,7 +3,7 @@ const marked = require('marked');
 const fs = require('fs');
 const path = require('path');
 const cwd = process.cwd();
-const posts_dir = path.join(cwd, 'src/routes/blog/_posts/')
+const posts_dir = path.join(cwd, 'src/routes/blog/posts/')
 
 export async function get(req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
