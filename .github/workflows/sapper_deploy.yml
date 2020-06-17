@@ -15,3 +15,4 @@ jobs:
           publish_dir: __sapper__/export
           publish_branch: gh-pages
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          args: "--entry about"
