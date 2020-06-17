@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE_NAME="ldelossa/blog"
+BASE_NAME="ldelossa-blog"
 
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
