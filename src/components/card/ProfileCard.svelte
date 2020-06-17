@@ -1,8 +1,6 @@
 <script>
     import Icons from "../sidebar/Icons.svelte";
 
-    export let title = '';
-    export let blurb = '';
     export let avatar_url;
     let github_url = "https://github.com/ldelossa";
     let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
@@ -37,7 +35,7 @@
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        border: 5px solid #96897b;
+        border: 2px solid #dee2d6;
     }
     content {
         height: auto;
@@ -45,9 +43,9 @@
         grid-column: 1 / 4;
         grid-row: 2 / 4;
         z-index: 1;
-        background: white;
+        background: #e9f1f7;
         border-radius: 5%;
-        border: 5px solid #96897b;
+        border: 4px solid #dee2d6;
     }
     text-area {
         text-align: center;
@@ -57,7 +55,7 @@
         grid-column: 1 / 4;
         grid-row: 3 / 4;
         z-index: 2;
-        background: white;
+        background: #e9f1f7;
         border-radius: 5%;
         margin: 20px;
         color: #2f2f2f;
@@ -94,7 +92,7 @@
 
 <card-layout>
     <avatar>
-        <img class="avatar-img" src={avatar_url}>
+        <img alt="avatar image" class="avatar-img" src={avatar_url}>
     </avatar>
     <content>
     </content>
@@ -102,7 +100,7 @@
         <p class=author>Louis DeLosSantos</p>
         <p class=title>Principal Software Engineer</p>
         <location-wrapper>
-            <img class="icon-img" src='googlemaps.svg'/>
+            <img alt="location icon" class="icon-img" src='googlemaps.svg'/>
             <p class=author>Brooklyn NY</p>
         </location-wrapper>
         <p class=blurb>

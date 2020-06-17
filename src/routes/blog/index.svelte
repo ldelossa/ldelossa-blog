@@ -1,34 +1,53 @@
 <script context="module">
-	export function preload({ params, query }) {
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-			return { posts };
-		});
-	}
+    export async function preload(page, session) {
+        const res = await this.fetch(`blog.json`);
+        const posts = await res.json();
+        return { posts };
+    }
 </script>
 
 <script>
-	export let posts;
+    export let posts;
 </script>
 
-<style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
-	}
-</style>
-
 <svelte:head>
-	<title>Blog</title>
+    <title>blog</title>
 </svelte:head>
 
-<h1>Coming Soon...</h1>
+<style>
+    index-wrapper {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        font-family: 'Muli', sans-serif;
+		padding: 45px;
+    }
+    entry-wrapper {
+        height: auto;
+        width: auto;
+        margin: 25px;
+    }
+    .blog_title {
+        margin: 10px;
+        letter-spacing: 8px;
+        font-size: 3vmin;
+    }
+    .blog_description {
+        margin: 10px;
+        letter-spacing: 2px;
+        font-size: 1.5vmin;
+    }
+</style>
 
-<ul>
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
-	{/each}
-</ul>
+<index-wrapper>
+    {#each posts as post} 
+        <entry-wrapper>
+            <a class=blog_title href="/blog/{post.id}">{post.title}</a>
+            <p class=blog_description>{post.date}</p>
+            <p class=blog_description>{post.desc}</p>
+        </entry-wrapper>
+    {/each}
+</index-wrapper>

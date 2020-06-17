@@ -1,64 +1,48 @@
 <script context="module">
-	export async function preload({ params, query }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
-		const res = await this.fetch(`blog/${params.slug}.json`);
-		const data = await res.json();
-
-		if (res.status === 200) {
-			return { post: data };
-		} else {
-			this.error(res.status, data.message);
-		}
-	}
+    export async function preload(page, session) {
+        const { slug } = page.params;
+        const res = await this.fetch(`blog/${slug}.json`)
+        const article = await res.json();
+        return {article}
+    }
 </script>
-
 <script>
-	export let post;
+    export let article;
 </script>
+
+<svelte:head>
+    <title>{article.title}</title>
+</svelte:head>
 
 <style>
-	/*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
-	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
+    blog-wrapper {
+        height: auto;
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        color: white;
+    }
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 45px;
+        color: #e9f1f7;
+        font-family: 'Muli', sans-serif;
 	}
-
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
-
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
-
-	.content :global(ul) {
-		line-height: 1.5;
-	}
-
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
 	}
 </style>
 
-<svelte:head>
-	<title>{post.title}</title>
-</svelte:head>
 
-<h1>{post.title}</h1>
-
-<div class='content'>
-	{@html post.html}
-</div>
+<blog-wrapper class="container">
+    <article class="markdown-body">
+        {@html article.html}
+    </article>
+</blog-wrapper>

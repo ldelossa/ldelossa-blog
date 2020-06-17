@@ -16,9 +16,6 @@
         height: 100%;
         width: 100%;
     } 
-    .displayed {
-        display: visible;
-    }
     @media screen and (max-width: 1048px) {
         about-wrapper {
             display: flex;
@@ -29,9 +26,6 @@
             height: 100%;
             width: 100%;
         } 
-        .displayed {
-            display: none;
-        }
     }
 </style>
 

@@ -19,12 +19,12 @@
 
 <icons>
     <a href={linkedin_url} target="_blank">
-        <img src='linkedin.svg'/>
+        <img alt="linkedin icon" src='linkedin.svg'/>
     </a>
     <a href={github_url} target="_blank">
-        <img src='github.svg'/>
+        <img alt="github icon" src='github.svg'/>
     </a>
     <a href={twitter_url} target="_blank">
-        <img src='twitter.svg'/>
+        <img alt="twitter icon" src='twitter.svg'/>
     </a>
 </icons>

@@ -2,12 +2,10 @@
     import Console from "./Console.svelte";
     import SidebarItem from "./SidebarItem.svelte";
     import Icons from "./Icons.svelte";
-    export let avatar_url;
     export let github_url;
     export let linkedin_url;
     export let twitter_url;
     export let author;
-    export let blurb;
 </script>
 
 <style>
@@ -55,13 +53,6 @@
         justify-content: flex-end;
         padding: 20px;
     }
-    hr {
-        border: 0;
-        height: 1px;
-        background: #333;
-        background-image: linear-gradient(to right, #ccc, #333, #ccc);
-    }
-
     /* hide everthing except for nav */
     @media screen and (max-width: 600px) {
         sidebar {

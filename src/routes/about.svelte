@@ -9,7 +9,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #2c2c2c; 
+        color: #e9f1f7;
         height: 100%;
         width: 100%;
     } 

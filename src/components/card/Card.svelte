@@ -8,8 +8,8 @@
 
 <style>
     card-layout {
-      height: 75%;
-      width: 75%;
+      height: 85%;
+      width: 85%;
       box-shadow: 0px 8px 60px -10px rgba(13,28,39,0.6);
       border-radius: 10px;
       display: grid;
@@ -26,7 +26,7 @@
       display: flex;
       justify-content: flex-start;
       align-content: center;
-      font-family: 'Source Code Pro', monospace;
+      font-family: 'Muli', sans-serif;
       font-size: 3.5vmin;
       color: white;
       background:  #4b6777;
@@ -34,7 +34,7 @@
       padding: 20px;
     }
     card-body {
-      font-family: 'Source Code Pro', monospace;
+      font-family: 'Muli', sans-serif;
       font-size: 2.5vmin;
       padding: 30px;
     }

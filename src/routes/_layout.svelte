@@ -23,7 +23,10 @@
     }
 
     function handleNavClick(event){
+        const mq = window.matchMedia("(max-width: 600px)")
+        if (mq.matches) {
             visible = false
+        }
     }
 </script>
 
@@ -66,7 +69,7 @@
         padding: 10px 20px;
         font-size: 50px;
         cursor: pointer;
-        color: #96897b;
+        color: #f3f8f2;
         font-family: 'Baloo Paaji 2', cursive;
         position: absolute;
         right: 0%;

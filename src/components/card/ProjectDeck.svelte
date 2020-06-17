@@ -77,7 +77,7 @@
             <section-title>
                 <h6>Summary</h6>
                 <a href="http://github.com/quay/claircore" target="_blank">
-                    <img src='github.svg'/>
+                    <img alt="github icon" src='github.svg'/>
                 </a>
             </section-title>
             <project-summary>
@@ -98,7 +98,7 @@
             <section-title>
                 <h6>Summary</h6>
                 <a href="http://github.com/quay/clair" target="_blank">
-                    <img src='github.svg'/>
+                    <img alt="github icon" src='github.svg'/>
                 </a>
             </section-title>
             <project-summary>
