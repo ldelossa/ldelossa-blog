@@ -9,10 +9,12 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "deploy": "npm run clean && npm run export && node ./scripts/deploy.js"
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "gh-pages": "^3.0.0",
     "marked": "^1.1.0",
     "polka": "next",
     "sirv": "^0.4.0"
