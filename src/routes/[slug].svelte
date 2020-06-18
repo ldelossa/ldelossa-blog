@@ -1,7 +1,6 @@
 <script context="module">
     export async function preload(page, session) {
         const { slug } = page.params;
-        console.log(slug)
         const res = await this.fetch(`${slug}.json`)
         const article = await res.json();
         return {article}
