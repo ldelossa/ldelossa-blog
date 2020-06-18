@@ -10,7 +10,7 @@
     let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
     let twitter_url = "https://twitter.com/ldelossa_ld";
 
-    let visible = false;
+    let visible = true;
     let toggle = '☰' 
 
     function toggleVisible() {
