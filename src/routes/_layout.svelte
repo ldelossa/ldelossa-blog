@@ -10,18 +10,15 @@
     let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
     let twitter_url = "https://twitter.com/ldelossa_ld";
 
-    let visible = true;
-    let toggleChars = {
-        double: '⇔',
-        left: '⇐',
-        right: '⇒'
-    }
-    let toggle = visible ? toggleChars.left : toggleChars.right
+    let visible = false;
+    let toggle = '☰' 
 
     function toggleVisible() {
         visible = !visible;
     }
 
+    /* if media query is true clicking on icons will
+       hide the sidebar automatically */
     function handleNavClick(event){
         const mq = window.matchMedia("(max-width: 600px)")
         if (mq.matches) {
@@ -30,18 +27,12 @@
     }
 </script>
 
-<svelte:head>
-</svelte:head>
-
 <style>
     layout {
         display: grid;
         height: 100vh;
         width: 100vw;
         grid-template-columns: 1.5fr 8fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "sidebar content";
     }
     sidebar-wrapper {
         height: 100vh;
@@ -67,14 +58,13 @@
         outline: none;
         background-color: Transparent;
         border: none;
-        background-color: inherit;
-        padding: 10px 20px;
+        padding: 10px 12px;
         font-size: 30px;
         cursor: pointer;
         color: #f3f8f2;
-        font-family: 'Baloo Paaji 2', cursive;
+        font-family: 'Muli', cursive;
         position: absolute;
-        right: 0%;
+        left: 0%;
     }
     .sb-toggle-button-closed {
         display: inline;
@@ -82,24 +72,19 @@
         outline: none;
         background-color: Transparent;
         border: none;
-        background-color: inherit;
-        padding: 10px 20px;
+        padding: 10px 12px;
         font-size: 30px;
         cursor: pointer;
         color: #4b6777;
-        font-family: 'Baloo Paaji 2', cursive;
+        font-family: 'Muli', cursive;
         position: absolute;
-        right: 0%;
+        left: 0%;
     }
     @media screen and (max-width: 600px) {
         layout {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 8fr;
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            grid-area:
-                "content";
         }
         sidebar-wrapper {
             grid-column: 1 / 2;
@@ -127,22 +112,17 @@
 </button>
 <layout>
     {#if visible}
-        <sidebar-wrapper transition:fly="{{ delay: 100, duration: 250, x: -200, easing: quintOut, opacity: 100 }}"
-                         on:introstart="{() => visible ? toggle = toggleChars.double : toggle = toggleChars.left}"
-                         on:introend="{() => visible ? toggle = toggleChars.left : toggle = toggleChars.double}"
-                         on:outrostart="{() => toggle = toggleChars.double}"
-                         on:outroend="{() => toggle = toggleChars.right}"
-                         >
-        <Sidebar 
-            on:navitemclick={handleNavClick}
-            avatar_url={avatar_url}
-            author={author}
-            blurb={blurb}
-            github_url={github_url}
-            linkedin_url={linkedin_url}
-            twitter_url={twitter_url}
-        /> 
-    </sidebar-wrapper>
+        <sidebar-wrapper transition:fly="{{ delay: 100, duration: 250, x: -200, easing: quintOut, opacity: 100 }}">
+            <Sidebar 
+                on:navitemclick={handleNavClick}
+                avatar_url={avatar_url}
+                author={author}
+                blurb={blurb}
+                github_url={github_url}
+                linkedin_url={linkedin_url}
+                twitter_url={twitter_url}
+            /> 
+        </sidebar-wrapper>
     {/if}
     <content-wrapper
         class:content-wrapper-full="{!visible}">
