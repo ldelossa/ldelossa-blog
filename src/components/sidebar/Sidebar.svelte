@@ -10,15 +10,11 @@
 
 <style>
     sidebar {
-        display: grid;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
         height: 100%;
         width: 100%;
-        grid-template-columns: 100fr;
-        grid-template-rows: 3fr 11fr 2fr;
-        grid-template-areas:
-            "author"
-            "navigation"
-            "icons";
         margin-right: 1vmin;
         background: #4b6777; 
     }
@@ -62,7 +58,6 @@
             box-shadow:         initial;
             margin-right: initial;
             border-right: initial;
-            grid-template-rows: 2fr 2fr 1fr 1fr;
         }
         icons-wrapper {
             display: flex;

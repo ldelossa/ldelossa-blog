@@ -33,12 +33,12 @@
     .blog_title {
         margin: 10px;
         letter-spacing: 8px;
-        font-size: 3vmin;
+        font-size: 4vmin;
     }
     .blog_description {
         margin: 10px;
         letter-spacing: 2px;
-        font-size: 1.5vmin;
+        font-size: 2.5vmin;
     }
 </style>
 

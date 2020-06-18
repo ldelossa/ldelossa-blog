@@ -54,6 +54,8 @@
         grid-area: 1 / 2 / 2 / 3;
         overflow-y: auto;
     }
+    /* this class will be applied when the
+       sidebar is not visible */
     .content-wrapper-full {
         height: 100%;
         width: 100%;
@@ -67,7 +69,7 @@
         border: none;
         background-color: inherit;
         padding: 10px 20px;
-        font-size: 50px;
+        font-size: 30px;
         cursor: pointer;
         color: #f3f8f2;
         font-family: 'Baloo Paaji 2', cursive;
@@ -82,7 +84,7 @@
         border: none;
         background-color: inherit;
         padding: 10px 20px;
-        font-size: 50px;
+        font-size: 30px;
         cursor: pointer;
         color: #4b6777;
         font-family: 'Baloo Paaji 2', cursive;
@@ -99,12 +101,6 @@
             grid-area:
                 "content";
         }
-        .sb-toggle-button-open {
-            font-size: 40px;
-        }
-        .sb-toggle-button-closed {
-            font-size: 40px;
-        }
         sidebar-wrapper {
             grid-column: 1 / 2;
             grid-row: 1 / 3;
@@ -115,9 +111,10 @@
             grid-row: 1 / 3;
             z-index: 1;
         }
+        /* this class will be applied when the
+           sidebar is not visible */
         .content-wrapper-full {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
+            grid-area: 1 / 1 / 2 / 3;
             z-index: 1;
         }
     }
@@ -144,7 +141,7 @@
             github_url={github_url}
             linkedin_url={linkedin_url}
             twitter_url={twitter_url}
-             /> 
+        /> 
     </sidebar-wrapper>
     {/if}
     <content-wrapper
