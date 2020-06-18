@@ -22,7 +22,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        grid-area: author;
         margin: 40px;
     }
     .author {
@@ -36,7 +35,6 @@
         margin: 20px;
     }
     nav {
-        grid-area: navigation;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -44,7 +42,6 @@
     }
     icons-wrapper {
         display: flex;
-        grid-area: icons;
         flex-direction: column;
         justify-content: flex-end;
         padding: 20px;
