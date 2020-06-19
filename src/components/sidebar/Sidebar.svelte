@@ -110,6 +110,8 @@
             box-shadow:         initial;
             margin-right: initial;
             border-right: initial;
+            height: 100vh;
+            width: 100vw;
         }
         icons-wrapper {
             display: flex;
