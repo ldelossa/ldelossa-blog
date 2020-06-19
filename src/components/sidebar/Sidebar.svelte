@@ -2,14 +2,29 @@
     import Console from "./Console.svelte";
     import SidebarItem from "./SidebarItem.svelte";
     import Icons from "./Icons.svelte";
+    import { createEventDispatcher } from 'svelte';
+
     export let github_url;
     export let linkedin_url;
     export let twitter_url;
     export let author;
+
+    let visible = false;
+    let toggle = '☰';
+
+    /* when the toggle is clicked we'll dispatch
+       an event for others to listen */
+    const dispatch = createEventDispatcher()
+    function toggleVisible() {
+        visible = !visible;
+        dispatch('navtoggled', {
+            visible: visible
+        });
+    }
 </script>
 
 <style>
-    sidebar {
+    .sidebar-open {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -17,6 +32,37 @@
         width: 100%;
         margin-right: 1vmin;
         background: #4b6777; 
+    }
+    .sidebar-closed {
+        display: none;
+    }
+    .sb-toggle-button-open {
+        display: fixed;
+        z-index: 100;
+        outline: none;
+        background-color: Transparent;
+        border: none;
+        padding: 10px 12px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #f3f8f2;
+        font-family: 'Muli', cursive;
+        position: absolute;
+        left: 0%;
+    }
+    .sb-toggle-button-closed {
+        display: inline;
+        z-index: 100;
+        outline: none;
+        background-color: Transparent;
+        border: none;
+        padding: 10px 12px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #4b6777;
+        font-family: 'Muli', cursive;
+        position: absolute;
+        left: 0%;
     }
     author-wrapper {
         display: flex;
@@ -48,7 +94,7 @@
     }
     /* hide everthing except for nav */
     @media screen and (max-width: 600px) {
-        sidebar {
+        .sidebar-open {
             /* resets */
             -moz-box-shadow:    initial;
             -webkit-box-shadow: initial;
@@ -65,9 +111,13 @@
     }
 </style>
 
-
-
-<sidebar >
+<button 
+        class:sb-toggle-button-open="{visible === true}"
+        class:sb-toggle-button-closed="{visible === false}"
+        on:click={toggleVisible}>
+        {toggle}
+</button>
+<div class="{ visible ? 'sidebar-open' : 'sidebar-closed' }">
     <author-wrapper>
         <p class="author">{author}<p>
         <console-wrapper>
@@ -85,4 +135,4 @@
                linkedin_url={linkedin_url}
                twitter_url={twitter_url}/>
     </icons-wrapper>
-</sidebar>
+</div>
