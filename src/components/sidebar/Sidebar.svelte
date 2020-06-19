@@ -21,6 +21,15 @@
             visible: visible
         });
     }
+
+    /* if media query is true clicking on icons will
+       hide the sidebar automatically */
+    function handleNavClick(event){
+        const mq = window.matchMedia("(max-width: 600px)")
+        if (mq.matches) {
+            visible = false
+        }
+    }
 </script>
 
 <style>
@@ -125,10 +134,10 @@
         </console-wrapper>
     </author-wrapper>
     <nav>
-        <SidebarItem on:navitemclick name="about" href="about"/>
-        <SidebarItem on:navitemclick name="resume" href="resume"/>
-        <SidebarItem on:navitemclick name="projects" href="projects"/>
-        <SidebarItem on:navitemclick name="blog" href="blog"/>
+        <SidebarItem on:navitemclick={handleNavClick} name="about" href="about"/>
+        <SidebarItem on:navitemclick={handleNavClick} name="resume" href="resume"/>
+        <SidebarItem on:navitemclick={handleNavClick} name="projects" href="projects"/>
+        <SidebarItem on:navitemclick={handleNavClick} name="blog" href="blog"/>
     </nav>
     <icons-wrapper>
         <Icons github_url={github_url} 

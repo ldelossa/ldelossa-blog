@@ -23,7 +23,7 @@
     function handleNavClick(event){
         const mq = window.matchMedia("(max-width: 600px)")
         if (mq.matches) {
-            visible = false
+            full = false
         }
     }
 </script>
@@ -34,11 +34,6 @@
         height: 100vh;
         width: 100vw;
         grid-template-columns: 1.5fr 8fr;
-    }
-    sidebar-wrapper {
-        height: 100vh;
-        width: auto;
-        grid-area: 1 / 1 / 2 / 2;
     }
     content-wrapper {
         height: 100%;
@@ -57,11 +52,6 @@
             grid-template-columns: 1fr;
             grid-template-rows: 8fr;
         }
-        sidebar-wrapper {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
-            z-index: 2;
-        }
         content-wrapper {
             grid-column: 1 / 2;
             grid-row: 1 / 3;
@@ -74,17 +64,15 @@
     }
 </style>
 <layout>
-    <sidebar-wrapper>
-        <Sidebar 
-            on:navitemclick={handleNavClick}
-            on:navtoggled={handleNavToggled}
-            avatar_url={avatar_url}
-            author={author}
-            github_url={github_url}
-            linkedin_url={linkedin_url}
-            twitter_url={twitter_url}
-        /> 
-    </sidebar-wrapper>
+    <Sidebar 
+        on:navitemclick={handleNavClick}
+        on:navtoggled={handleNavToggled}
+        avatar_url={avatar_url}
+        author={author}
+        github_url={github_url}
+        linkedin_url={linkedin_url}
+        twitter_url={twitter_url}
+    /> 
     <content-wrapper
         class:content-wrapper-full="{full}">
         <slot></slot>
