@@ -18,15 +18,11 @@
     blog-wrapper {
         height: auto;
         width: 95%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
         color: white;
     }
 	.markdown-body {
-		min-width: 200px;
-		max-width: 980px;
+		min-width: 100px;
+		max-width: 50%;
 		margin: 0 auto;
 		padding: 45px;
         color: #e9f1f7;
@@ -34,13 +30,13 @@
 	}
 	@media (max-width: 767px) {
 		.markdown-body {
-			padding: 15px;
+		    max-width: 75%;
 		}
 	}
 </style>
 
 
-<blog-wrapper class="container">
+<blog-wrapper>
     <article class="markdown-body">
         {@html article.html}
     </article>
