@@ -15,10 +15,9 @@
 </svelte:head>
 
 <style>
-    blog-wrapper {
-        height: auto;
-        width: 95%;
-        color: white;
+    .blog-wrapper {
+        background: pink;
+        max-width: 100vw;
     }
 	.markdown-body {
 		min-width: 100px;
@@ -36,8 +35,8 @@
 </style>
 
 
-<blog-wrapper>
-    <article class="markdown-body">
+<div class=blog-wrapper>
+    <article>
         {@html article.html}
     </article>
-</blog-wrapper>
+</div>
