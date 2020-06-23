@@ -36,14 +36,10 @@
         grid-template-columns: 1.5fr 8fr;
     }
     .content-wrapper {
-        height: 100%;
-        width: 100%;
         grid-area: 1 / 2 / 2 / 3;
         overflow-y: auto;
     }
     .content-wrapper-full {
-        height: 100%;
-        width: 100%;
         grid-area: 1 / 1 / 2 / 3
     }
     @media screen and (max-width: 600px) {

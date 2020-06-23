@@ -37,10 +37,11 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        height: 100%;
+        height: 100vh;
         width: 100%;
         margin-right: 1vmin;
         background: #4b6777; 
+        overflow-y: hidden;
     }
     .sidebar-closed {
         display: none;
@@ -73,7 +74,7 @@
         position: absolute;
         left: 0%;
     }
-    author-wrapper {
+    .author-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -86,7 +87,7 @@
         font-family: 'Muli', sans-serif;
         letter-spacing: 1px;
     }
-    console-wrapper {
+    .console-wrapper {
         margin: 20px;
     }
     nav {
@@ -95,7 +96,7 @@
         justify-content: space-around;
         flex-wrap: wrap;
     }
-    icons-wrapper {
+    .icons-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -129,21 +130,21 @@
         {toggle}
 </button>
 <div class="{ visible ? 'sidebar-open' : 'sidebar-closed' }">
-    <author-wrapper>
+    <div class="author-wrapper">
         <p class="author">{author}<p>
-        <console-wrapper>
+        <div class="console-wrapper">
             <Console/>
-        </console-wrapper>
-    </author-wrapper>
+        </div>
+    </div>
     <nav>
         <SidebarItem on:navitemclick={handleNavClick} name="about" href="about"/>
         <SidebarItem on:navitemclick={handleNavClick} name="resume" href="resume"/>
         <SidebarItem on:navitemclick={handleNavClick} name="projects" href="projects"/>
         <SidebarItem on:navitemclick={handleNavClick} name="blog" href="blog"/>
     </nav>
-    <icons-wrapper>
+    <div class="icons-wrapper">
         <Icons github_url={github_url} 
                linkedin_url={linkedin_url}
                twitter_url={twitter_url}/>
-    </icons-wrapper>
+    </div>
 </div>
