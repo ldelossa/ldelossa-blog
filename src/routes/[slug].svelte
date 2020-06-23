@@ -16,12 +16,12 @@
 
 <style>
     .blog-wrapper {
-        background: pink;
+        max-height: 100vh;
         max-width: 100vw;
     }
 	.markdown-body {
 		min-width: 100px;
-		max-width: 50%;
+		max-width: 700px;
 		margin: 0 auto;
 		padding: 45px;
         color: #e9f1f7;
@@ -36,7 +36,7 @@
 
 
 <div class=blog-wrapper>
-    <article>
+    <article class="markdown-body">
         {@html article.html}
     </article>
 </div>
