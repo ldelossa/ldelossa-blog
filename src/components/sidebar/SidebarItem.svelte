@@ -27,6 +27,6 @@
     }
 </style>
 
-<div class="button-wrapper">
+<div class="button-wrapper" on:click={dispatchClick}>
     <a class="button-ref" href={href}>{name}</a>
 </div>
