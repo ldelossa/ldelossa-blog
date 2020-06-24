@@ -11,6 +11,8 @@
     card-layout {
         height: 75vmin;
         width: 80vmin;
+        min-width: 300px;
+        min-height: 350px;
         display: grid;
         margin: 20px;
         overflow: auto;
@@ -24,8 +26,8 @@
         }
     }
     avatar {
-        height: auto;
-        width: auto;
+        min-height: 70px;
+        min-width: 70px;
         grid-column: 2 / 3;
         grid-row: 1 / 3;
         z-index: 3;

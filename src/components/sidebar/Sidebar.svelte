@@ -41,7 +41,6 @@
         width: 100%;
         margin-right: 1vmin;
         background: #4b6777; 
-        overflow-y: hidden;
     }
     .sidebar-closed {
         display: none;
@@ -59,6 +58,9 @@
         position: fixed;
         left: 0%;
     }
+    .sb-toggle-button-open:hover {
+        color: #f2511b;
+    }
     .sb-toggle-button-closed {
         z-index: 100;
         outline: none;
@@ -71,6 +73,9 @@
         font-family: 'Muli', cursive;
         position: fixed;
         left: 0%;
+    }
+    .sb-toggle-button-closed:hover {
+        color: #f2511b;
     }
     .author-wrapper {
         display: flex;

@@ -25,6 +25,9 @@
         font-family: 'Muli', sans-serif;
         letter-spacing: 1px;
     }
+    .button-ref:hover {
+        color: #f2511b;
+    }
 </style>
 
 <div class="button-wrapper" on:click={dispatchClick}>
