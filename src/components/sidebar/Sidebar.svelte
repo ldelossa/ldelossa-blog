@@ -47,7 +47,6 @@
         display: none;
     }
     .sb-toggle-button-open {
-        display: fixed;
         z-index: 100;
         outline: none;
         background-color: Transparent;
@@ -57,11 +56,10 @@
         cursor: pointer;
         color: #f3f8f2;
         font-family: 'Muli', cursive;
-        position: absolute;
+        position: fixed;
         left: 0%;
     }
     .sb-toggle-button-closed {
-        display: inline;
         z-index: 100;
         outline: none;
         background-color: Transparent;
@@ -71,7 +69,7 @@
         cursor: pointer;
         color: #4b6777;
         font-family: 'Muli', cursive;
-        position: absolute;
+        position: fixed;
         left: 0%;
     }
     .author-wrapper {
@@ -114,7 +112,7 @@
             height: 100vh;
             width: 100vw;
         }
-        icons-wrapper {
+        .icons-wrapper {
             display: flex;
             grid-area: icons;
             flex-direction: column;
@@ -124,8 +122,7 @@
 </style>
 
 <button 
-        class:sb-toggle-button-open="{visible === true}"
-        class:sb-toggle-button-closed="{visible === false}"
+        class="{ visible ? 'sb-toggle-button-open' : 'sb-toggle-button-closed' }"
         on:click={toggleVisible}>
         {toggle}
 </button>
