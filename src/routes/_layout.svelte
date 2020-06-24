@@ -33,7 +33,7 @@
         display: grid;
         height: 100vh;
         width: 100vw;
-        grid-template-columns: 1.5fr 8fr;
+        grid-template-columns: 1.5fr 6fr;
     }
     .content-wrapper {
         grid-area: 1 / 2 / 2 / 3;
@@ -46,15 +46,11 @@
         .layout {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 8fr;
         }
         .content-wrapper {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
             z-index: 1;
         }
         .content-wrapper-full {
-            grid-area: 1 / 1 / 2 / 3;
             z-index: 1;
         }
     }

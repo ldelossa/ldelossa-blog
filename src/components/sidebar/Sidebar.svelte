@@ -38,9 +38,11 @@
         justify-content: space-between;
         flex-direction: column;
         height: 100vh;
-        width: 100%;
+        max-width: 300px;
+        min-width: 275px;
         margin-right: 1vmin;
         background: #4b6777; 
+        overflow-y: hidden;
     }
     .sidebar-closed {
         display: none;
@@ -112,6 +114,8 @@
             -moz-box-shadow:    initial;
             -webkit-box-shadow: initial;
             box-shadow:         initial;
+            max-width: initial;
+            min-width: initial;
             margin-right: initial;
             border-right: initial;
             height: 100vh;
