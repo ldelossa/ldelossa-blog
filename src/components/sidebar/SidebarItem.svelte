@@ -13,7 +13,7 @@
 </script>
 
 <style>
-    button-wrapper {
+    .button-wrapper {
         text-align: center;
         margin: 1rem 0 1rem 0;
         padding: 1rem 1rem 1rem 1rem;
@@ -27,6 +27,6 @@
     }
 </style>
 
-<button-wrapper on:click={dispatchClick}>
+<div class="button-wrapper">
     <a class="button-ref" href={href}>{name}</a>
-</button-wrapper>
+</div>

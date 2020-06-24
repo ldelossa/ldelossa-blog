@@ -6,7 +6,7 @@
 </script>
 
 <style>
-    about-wrapper {
+    .resume-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -15,26 +15,15 @@
         height: 100%;
         width: 100%;
     } 
-    @media screen and (max-width: 1048px) {
-        about-wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #2c2c2c; 
-            height: 100%;
-            width: 100%;
-        } 
-    }
 </style>
 
 <svelte:head>
 	<title>About</title>
 </svelte:head>
 
-<about-wrapper>
+<div class="resume-wrapper">
     <Card class=displayed title="Resume"
           blurb={resumeEmbed}>
     </Card>
-</about-wrapper>
+</div>
 

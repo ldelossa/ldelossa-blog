@@ -3,7 +3,7 @@
 </script>
 
 <style>
-    projects-wrapper {
+    .projects-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -18,7 +18,7 @@
 	<title>Projects</title>
 </svelte:head>
 
-<projects-wrapper>
+<div class="projects-wrapper">
     <ProjectDeck>
     </ProjectDeck>
-</projects-wrapper>
+</div>

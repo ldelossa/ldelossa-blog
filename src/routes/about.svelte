@@ -4,7 +4,7 @@
 </script>
 
 <style>
-    about-wrapper {
+    .about-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,8 +19,8 @@
 	<title>About</title>
 </svelte:head>
 
-<about-wrapper>
+<div class="about-wrapper">
     <ProfileCard avatar_url={avatar_url}>
     </ProfileCard>
-</about-wrapper>
+</div>
 

@@ -5,7 +5,7 @@
 </script>
 
 <style>
-    icons {
+    .icons {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -17,7 +17,7 @@
     }
 </style>
 
-<icons>
+<div class="icons">
     <a href={linkedin_url} target="_blank">
         <img alt="linkedin icon" src='linkedin.svg'/>
     </a>
@@ -27,4 +27,4 @@
     <a href={twitter_url} target="_blank">
         <img alt="twitter icon" src='twitter.svg'/>
     </a>
-</icons>
+</div>
