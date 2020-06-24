@@ -25,7 +25,7 @@
             width: auto;
         }
     }
-    avatar {
+    .avatar {
         min-height: 70px;
         min-width: 70px;
         grid-column: 2 / 3;
@@ -39,17 +39,17 @@
         border-radius: 50%;
         border: 2px solid #dee2d6;
     }
-    content {
+    .content {
         height: auto;
         width: auto;
         grid-column: 1 / 4;
         grid-row: 2 / 4;
         z-index: 1;
-        background: #e9f1f7;
+        background: #4b6777; 
         border-radius: 5%;
         border: 4px solid #dee2d6;
     }
-    text-area {
+    .text-area {
         text-align: center;
         align-content: center;
         height: auto;
@@ -57,12 +57,12 @@
         grid-column: 1 / 4;
         grid-row: 3 / 4;
         z-index: 2;
-        background: #e9f1f7;
+        background: #4b6777; 
         border-radius: 5%;
         margin: 20px;
-        color: #2f2f2f;
+        color: #e9f1f7;
     }
-    location-wrapper{
+    .location-wrapper{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -79,6 +79,7 @@
       letter-spacing: 1px;
       font-size: 2.5vmin;
       padding: 15px;
+      color: #f2511b;
     }
     .blurb {
       font-family: 'Muli', sans-serif;
@@ -93,18 +94,18 @@
 </style>
 
 <card-layout>
-    <avatar>
+    <div class="avatar">
         <img alt="avatar image" class="avatar-img" src={avatar_url}>
-    </avatar>
-    <content>
-    </content>
-    <text-area>
+    </div>
+    <div class="content">
+    </div>
+    <div class="text-area">
         <p class=author>Louis DeLosSantos</p>
         <p class=title>Principal Software Engineer</p>
-        <location-wrapper>
+        <div class="location-wrapper">
             <img alt="location icon" class="icon-img" src='googlemaps.svg'/>
             <p class=author>Brooklyn NY</p>
-        </location-wrapper>
+        </div>
         <p class=blurb>
             I'm a technologist who writes a lot of Go code,
             makes music occasionally, and works at Red Hat.
@@ -112,5 +113,5 @@
         <Icons github_url={github_url} 
                linkedin_url={linkedin_url}
                twitter_url={twitter_url}/>
-    </text-area>
+    </div>
 </card-layout>
