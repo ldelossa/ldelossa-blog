@@ -88,9 +88,10 @@
     .author {
         text-align: center;
         font-size: 2rem;
-        color: white;
+        color: #f3f8f2;
         font-family: 'Muli', sans-serif;
         letter-spacing: 1px;
+        text-shadow: 2px 2px 0 rgba(0,0,0,0.35),2px 2px 5px rgba(0,0,0,0.5);
     }
     .console-wrapper {
         margin: 20px;

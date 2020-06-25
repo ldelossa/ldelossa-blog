@@ -24,9 +24,12 @@
         color: #e9f1f7;
         font-family: 'Muli', sans-serif;
         letter-spacing: 1px;
+        text-shadow: 2px 2px 0 rgba(0,0,0,0.35),2px 2px 5px rgba(0,0,0,0.5);
+
     }
     .button-ref:hover {
         color: #f2511b;
+        text-shadow: -1px -1px 0 rgba(242, 81, 27, .5), -1px -1px -5px rgba(242, 81, 27, .5)
     }
 </style>
 

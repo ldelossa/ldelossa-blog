@@ -16,7 +16,7 @@
 
 <style>
     index-wrapper {
-        color: white;
+        color: #e9f1f7;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -33,12 +33,12 @@
     .blog_title {
         margin: 10px;
         letter-spacing: 8px;
-        font-size: 4vmin;
+        font-size: min(30px,4vmin);
     }
     .blog_description {
         margin: 10px;
         letter-spacing: 2px;
-        font-size: 2.5vmin;
+        font-size: min(20px, 2.5vmin);
     }
 </style>
 

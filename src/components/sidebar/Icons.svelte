@@ -15,6 +15,10 @@
         width: 30px;
         height: 30px;
     }
+    img:hover {
+        -webkit-filter: drop-shadow(2px 2px 2px #222);
+        filter: drop-shadow(2px 2px 2px #222);
+    }
 </style>
 
 <div class="icons">

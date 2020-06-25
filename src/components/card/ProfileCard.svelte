@@ -61,6 +61,7 @@
         border-radius: 5%;
         margin: 20px;
         color: #e9f1f7;
+        text-shadow: 1px 1px 0 rgba(0,0,0,0.35),1px 1px 5px rgba(0,0,0,0.5)
     }
     .location-wrapper{
         display: flex;
@@ -80,6 +81,7 @@
       font-size: 2.5vmin;
       padding: 15px;
       color: #f2511b;
+      text-shadow: -1px -1px 0 rgba(242, 81, 27, .5), -1px -1px -5px rgba(242, 81, 27, .5)
     }
     .blurb {
       font-family: 'Muli', sans-serif;
