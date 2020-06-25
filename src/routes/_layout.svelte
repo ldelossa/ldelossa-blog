@@ -5,7 +5,6 @@
 
 
 
-    let avatar_url = "https://avatars3.githubusercontent.com/u/5642902?s=460&u=06352b1f80c7b5e42da67189907b35cdd1586772&v=4";
     let author = "Louis DeLosSantos";
     let github_url = "https://github.com/ldelossa";
     let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
@@ -59,7 +58,6 @@
     <Sidebar 
         on:navitemclick={handleNavClick}
         on:navtoggled={handleNavToggled}
-        avatar_url={avatar_url}
         author={author}
         github_url={github_url}
         linkedin_url={linkedin_url}

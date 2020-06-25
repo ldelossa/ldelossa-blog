@@ -1,6 +1,6 @@
 <script>
     import ProfileCard from "../components/card/ProfileCard.svelte";
-    let avatar_url = "https://avatars3.githubusercontent.com/u/5642902?s=460&u=06352b1f80c7b5e42da67189907b35cdd1586772&v=4";
+    let avatar_url = "headshot.jpg";
 </script>
 
 <style>
