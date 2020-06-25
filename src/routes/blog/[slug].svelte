@@ -27,6 +27,14 @@
         color: #e9f1f7;
         font-family: 'Muli', sans-serif;
 	}
+    pre {
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #4b6777;
+        border-radius: 3px;
+    }
 	@media (max-width: 767px) {
 		.markdown-body {
 		    max-width: 75%;
