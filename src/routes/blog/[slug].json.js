@@ -1,4 +1,4 @@
-import {index} from "./blog/index.json.js";
+import {index} from "./index.json.js";
 const marked = require('marked');
 const fs = require('fs');
 const path = require('path');

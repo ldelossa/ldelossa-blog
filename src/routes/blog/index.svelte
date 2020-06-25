@@ -45,7 +45,7 @@
 <index-wrapper>
     {#each posts as post} 
         <entry-wrapper>
-            <a class=blog_title href="{post.id}">{post.title}</a>
+            <a class=blog_title href="/blog/{post.id}">{post.title}</a>
             <p class=blog_description>{post.date}</p>
             <p class=blog_description>{post.desc}</p>
         </entry-wrapper>
