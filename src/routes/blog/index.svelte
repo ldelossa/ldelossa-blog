@@ -25,7 +25,7 @@
         font-family: 'Muli', sans-serif;
 		padding: 45px;
     }
-    entry-wrapper {
+    .entry-wrapper {
         height: auto;
         width: auto;
         margin: 25px;
@@ -34,6 +34,9 @@
         margin: 10px;
         letter-spacing: 8px;
         font-size: min(30px,4vmin);
+    }
+    a:hover {
+        color: #f2511b;
     }
     .blog_description {
         margin: 10px;
@@ -44,10 +47,10 @@
 
 <index-wrapper>
     {#each posts as post} 
-        <entry-wrapper>
+        <div class="entry-wrapper">
             <a class=blog_title href="/blog/{post.id}">{post.title}</a>
             <p class=blog_description>{post.date}</p>
             <p class=blog_description>{post.desc}</p>
-        </entry-wrapper>
+        </div>
     {/each}
 </index-wrapper>

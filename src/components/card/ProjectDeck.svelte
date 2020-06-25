@@ -6,6 +6,10 @@
         width: 40px;
         height: 40px;
     }
+    img:hover {
+        -webkit-filter: drop-shadow(2px 2px 2px #222);
+        filter: drop-shadow(2px 2px 2px #222);
+    }
     deck-layout {
         display: flex;
         flex-direction: column;
