@@ -7,17 +7,17 @@
         border-radius: 3%;
         padding: 10px;
         display: block;
+        min-width: 230px;
+        max-width: 275px;
     }
 </style>
 
-<div>
-    <pre>
-        <code>
+<pre>
+    <code>
 ❯ tree ./ldelossa 
 ├── hardware
 ├── linux
 ├── music
 └── software
-        </code>
-    </pre>
-</div>
+    </code>
+</pre>
