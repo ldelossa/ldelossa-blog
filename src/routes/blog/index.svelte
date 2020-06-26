@@ -27,7 +27,7 @@
     }
     .entry-wrapper {
         height: auto;
-        width: auto;
+        width: 75%;
         margin: 25px;
     }
     .blog_title {

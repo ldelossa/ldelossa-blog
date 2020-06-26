@@ -8,6 +8,13 @@ export const index = [
       desc: "I introduce my new minimal home network powered by containers",
       file: "_home-network-pt1.md"
   },
+  {
+      id: "e288d930-1445-43b1-a076-1e3ca455034b",
+      date: "2020-06-25 20:52:11-04:00",
+      title: "LFD-420 Review",
+      desc: "My review of the Linux Foundation's course Linux Kernel Internals and Development (LFD420)",
+      file: "_lfd420-review.md"
+  },
 ]
 export async function get(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
