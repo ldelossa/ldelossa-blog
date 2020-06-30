@@ -96,7 +96,7 @@
             <p class=title>Principal Software Engineer</p>
             <div class="location-wrapper">
                 <img alt="location icon" class="icon-img" src='googlemaps.svg'/>
-                <p class=author>Brooklyn NY</p>
+                <p class=author>Brooklyn, NY</p>
             </div>
             <p class=blurb>
                 A wanna-be kernel hacker working mostly with distributed systems in Go. <br>
