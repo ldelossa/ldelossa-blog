@@ -9,15 +9,12 @@
 
 <style>
     card-layout {
-        height: 75vmin;
-        width: 80vmin;
-        min-width: 300px;
-        min-height: 350px;
-        display: grid;
-        margin: 20px;
-        overflow: auto;
-        grid-template-columns: 4fr 2.5fr 4fr;
-        grid-template-rows: 1fr 1fr 6fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 10px;
+        max-width: 630px;
     }
     @media screen and (max-width: 1024px) {
         card-layout {
@@ -26,37 +23,31 @@
         }
     }
     .avatar {
-        min-height: 70px;
-        min-width: 70px;
-        grid-column: 2 / 3;
-        grid-row: 1 / 3;
-        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
         border-radius: 50%;
     }
     .avatar-img {
-        height: 100%;
-        width: 100%;
+        max-height: 15vh;
+        max-width: 15vw;
         border-radius: 50%;
         border: 2px solid #dee2d6;
+        position: relative;
+        top: 38px;
     }
     .content {
-        height: auto;
-        width: auto;
-        grid-column: 1 / 4;
-        grid-row: 2 / 4;
-        z-index: 1;
         background: #4b6777; 
         border-radius: 5%;
         border: 4px solid #dee2d6;
+        padding: 10px;
     }
     .text-area {
         text-align: center;
         align-content: center;
         height: auto;
         width: auto;
-        grid-column: 1 / 4;
-        grid-row: 3 / 4;
-        z-index: 2;
         background: #4b6777; 
         border-radius: 5%;
         margin: 20px;
@@ -87,7 +78,7 @@
       font-family: 'Muli', sans-serif;
       letter-spacing: 1px;
       font-size: 2.5vmin;
-      margin: 10vmin;
+      margin: 5vmin;
     }
     .icon-img {
         height: auto;
@@ -100,18 +91,22 @@
         <img alt="avatar image" class="avatar-img" src={avatar_url}>
     </div>
     <div class="content">
-    </div>
-    <div class="text-area">
-        <p class=author>Louis DeLosSantos</p>
-        <p class=title>Principal Software Engineer</p>
-        <div class="location-wrapper">
-            <img alt="location icon" class="icon-img" src='googlemaps.svg'/>
-            <p class=author>Brooklyn NY</p>
+        <div class="text-area">
+            <p class=author>Louis DeLosSantos</p>
+            <p class=title>Principal Software Engineer</p>
+            <div class="location-wrapper">
+                <img alt="location icon" class="icon-img" src='googlemaps.svg'/>
+                <p class=author>Brooklyn NY</p>
+            </div>
+            <p class=blurb>
+                A wanna-be kernel hacker working mostly with distributed systems in Go. <br>
+                <br>
+                My interests stretch across infrastructure, systems programming,
+                networking, and application architectures.<br>
+                <br>
+                I've worked at a lot of places, built a lot of things, and enjoy sharing my experience along the way.<br>
+            </p>
         </div>
-        <p class=blurb>
-            I'm a technologist who writes a lot of Go code,
-            makes music occasionally, and works at Red Hat.
-        </p>
         <Icons github_url={github_url} 
                linkedin_url={linkedin_url}
                twitter_url={twitter_url}/>
