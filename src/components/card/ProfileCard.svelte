@@ -36,6 +36,8 @@
         border: 2px solid #dee2d6;
         position: relative;
         top: 38px;
+        min-height: 70px;
+        min-width: 70px;
     }
     .content {
         background: #4b6777; 
