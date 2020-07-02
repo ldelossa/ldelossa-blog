@@ -31,7 +31,7 @@ We will get to the hostnames in a bit.
 
 The network will look like this:
 
-```
+```console
 +----------+  +--------+
 |  Laptop  |  | Iphone |
 +-----+----+  +---+----+
@@ -87,7 +87,7 @@ One nice thing is Podman and SystemD play along nicely. You can set up a contain
 
 Because I want to take advantage of the "hot-reload" that CoreDNS `hosts` plugin provides, I decided to place my CoreDNS configuration files on `ct-host` and mount them into the container.I created the directory `/etc/containers/etc.d/coredns` and wrote out following two files:
 
-```
+```console
 [root@ct-host coredns]# cat Corefile
 .:53 {
   cache 10
@@ -117,7 +117,7 @@ More on this later.
 
 Now I'll show you exactly how we create and run the CoreDNS server.
 
-```
+```console
 podman run --network ct-host --name coredns -dt -p 192.168.185.10:53:53/tcp -p 192.168.185.10:53:53/udp -v /etc/containers/etc.d/coredns:/etc/coredns coredns/coredns -conf /etc/coredns/Corefile
 ```
 
@@ -125,7 +125,7 @@ What this command is doing is creating a container that runs CoreDNS, mapping th
 
 Once you have this up and working, you can stop the container, and generate a SystemD service and enable it on boot:
 
-```
+```console
 podman generate systemd --name coredns > /etc/systemd/system/coredns-container.service
 systemctl daemon-reload
 systemctl enable coredns-container

@@ -1,6 +1,19 @@
 import {index} from "./index.json.js";
-const marked = require('marked');
-const fs = require('fs');
+const MarkdownIt = require('markdown-it');
+const hljs = require('highlight.js')
+const md = require('markdown-it')({
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre class="hljs"><code>' +
+               hljs.highlight(lang, str, true).value +
+               '</code></pre>';
+      } catch (__) {}
+    }
+
+    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+  }
+});const fs = require('fs');
 const path = require('path');
 const cwd = process.cwd();
 const posts_dir = path.join(cwd, 'src/routes/blog/posts/')
@@ -13,7 +26,7 @@ export async function get(req, res, next) {
 	});
 
 	const data = fs.readFileSync(path.join(posts_dir, article.file), 'utf-8')
-	const html = marked(data);
+	const html = md.render(data);
 	article.html = html;
 
 	res.end(JSON.stringify(article));
