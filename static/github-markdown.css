@@ -794,6 +794,8 @@
   border-radius: 3px;
   color: white;
   background: #4b6777;
+  /* edit */
+  color: #9cdcfe;
 }
 
 .markdown-body pre {
@@ -825,9 +827,11 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  /* our edit */
+  /* edit */
   background-color: #4b6777;
   border-radius: 3px;
+  /* edit */
+  color: #9cdcfe;
 }
 
 .markdown-body pre code {
@@ -840,6 +844,8 @@
   word-wrap: normal;
   background-color: initial;
   border: 0;
+  /* edit */
+  color: #9cdcfe;
 }
 
 .markdown-body .commit-tease-sha {
