@@ -1,6 +1,6 @@
 # A Minimal Home Network Pt 1
 
-*Checkout [Part 2](/blog/33ccf895-d158-43c6-ba1e-5f45596db9ad) For Application Routing*
+*Checkout [Part 2](/blog/home-network-pt2) For Application Routing*
 
 When I first started my career I would create pretty large "lab" environments at home.
 I used to work in systems/network engineering where setting up a network, a few virtual hosts, and fundamental network services like DNS was a valuable way to learn.
@@ -148,4 +148,4 @@ As new services come onto the network we can simply edit `/etc/containers/etc.d/
 
 This is part 1 where I introduce you to the lab idea and set up basic hostname resolution.
 
-In [Part 2](/blog/33ccf895-d158-43c6-ba1e-5f45596db9ad) we will set up Traefik to redirect and route specific hostnames to containers running on "ct-host", allowing us to only port-forward critical services to the local network.
+In [Part 2](/blog/home-network-pt2) we will set up Traefik to redirect and route specific hostnames to containers running on "ct-host", allowing us to only port-forward critical services to the local network.

@@ -1,6 +1,6 @@
 # A Minimal Home Network Pt 2
 
-In [Part 1](/blog/94297015-acc4-4089-b438-eeb566ce9c17) of this series I explain the desire to create a minimal home network running on containers, the stack being used to accomplish this, and how name resolution will work.
+In [Part 1](/blog/home-network-pt1) of this series I explain the desire to create a minimal home network running on containers, the stack being used to accomplish this, and how name resolution will work.
 
 This post will cover how services running as containers are routed.
 
