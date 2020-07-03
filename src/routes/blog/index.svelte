@@ -2,6 +2,7 @@
     export async function preload(page, session) {
         const res = await this.fetch(`blog.json`);
         const posts = await res.json();
+        console.log(posts)
         return { posts };
     }
 </script>
@@ -48,7 +49,7 @@
 <index-wrapper>
     {#each posts as post} 
         <div class="entry-wrapper">
-            <a class=blog_title href="/blog/{post.id}">{post.title}</a>
+            <a class=blog_title href="/blog/{post.file}">{post.title}</a>
             <p class=blog_description>{post.date}</p>
             <p class=blog_description>{post.desc}</p>
         </div>

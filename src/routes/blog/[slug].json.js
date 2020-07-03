@@ -16,16 +16,17 @@ const md = require('markdown-it')({
 });const fs = require('fs');
 const path = require('path');
 const cwd = process.cwd();
-const posts_dir = path.join(cwd, 'src/routes/blog/posts/')
+const posts_dir = path.join(cwd, 'src/routes/blog/_posts/')
 
 export async function get(req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
 	const {slug} = req.params;
 	const article = index.find((post)=>{
-			return post.id === slug;
+			return post.file === slug;
 	});
 
-	const data = fs.readFileSync(path.join(posts_dir, article.file), 'utf-8')
+  const filename = `${article.file}.md`
+	const data = fs.readFileSync(path.join(posts_dir, filename), 'utf-8')
 	const html = md.render(data);
 	article.html = html;
 
