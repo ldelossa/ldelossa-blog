@@ -20,7 +20,7 @@
 <style>
     pre code {
         border-radius: 3%;
-        padding: 10px;
+        padding: 8px;
         display: block;
         min-width: 230px;
         max-width: 275px;
