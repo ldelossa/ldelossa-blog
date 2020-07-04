@@ -54,7 +54,7 @@ Personally, I don't have any experience running Traefik in production and this p
 
 However, it uses a modern configuration syntax, provides path routing and redirecting, has a pretty good UI, and comprehendable documentation.
 
-Traefik being written in Go is an added benefit as playing with Go project help me design my own in the long run.
+Traefik being written in Go is an added benefit as playing with Go projects help me design my own in the long run.
 
 ### Configuration
 
