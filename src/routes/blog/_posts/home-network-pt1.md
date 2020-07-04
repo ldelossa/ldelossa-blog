@@ -54,7 +54,7 @@ This lab will introduce an additional host for creating and exposing containers.
 ```
 The network will look like this.
 
-CT-HOST is a fedora32 laptop running "podman" and will manage container lifecycles.
+CT-HOST is a Fedora32 laptop running Podman and will manage container lifecycles.
 The host resides on two networks: LAN (192.168.185.0/24) where devices communicate and CONTAINER-LAN (10.89.0.0/24) where containers communicate.
 The CONTAINER-LAN is virtual and created by the linux kernel.
 
