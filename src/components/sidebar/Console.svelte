@@ -9,6 +9,7 @@
         display: block;
         min-width: 230px;
         max-width: 275px;
+        background: #333;
     }
 </style>
 
