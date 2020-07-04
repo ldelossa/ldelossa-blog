@@ -9,17 +9,13 @@
     export let twitter_url;
     export let author;
 
-    let visible = false;
+    export let visible = '';
     let toggle = '☰';
 
     /* when the toggle is clicked we'll dispatch
        an event for others to listen */
-    const dispatch = createEventDispatcher()
     function toggleVisible() {
         visible = !visible;
-        dispatch('navtoggled', {
-            visible: visible
-        });
     }
 
     /* if media query is true clicking on icons will

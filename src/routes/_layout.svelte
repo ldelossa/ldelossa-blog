@@ -2,7 +2,7 @@
     import Sidebar from "../components/sidebar/Sidebar.svelte";
 	import { fly, fade, slide } from 'svelte/transition';
     import {quintOut} from 'svelte/easing';
-
+    import { onMount } from 'svelte';
 
 
     let author = "Louis DeLosSantos";
@@ -10,19 +10,14 @@
     let linkedin_url = "https://www.linkedin.com/in/louisdelossantos/";
     let twitter_url = "https://twitter.com/ldelossa_ld";
 
-    let full = true;
-    /* when the nav is hidden change our css class
-       to full */
-    function handleNavToggled(event) {
-        full = event.detail.visible ? false : true
-    }
-
+    /* whether sidebar is visible on load */
+    let visible = false;
     /* if media query is true clicking on icons will
        hide the sidebar automatically */
     function handleNavClick(event){
         const mq = window.matchMedia("(max-width: 600px)")
         if (mq.matches) {
-            full = false
+            visible = true
         }
     }
 </script>
@@ -57,13 +52,13 @@
 <div class="layout">
     <Sidebar 
         on:navitemclick={handleNavClick}
-        on:navtoggled={handleNavToggled}
+        bind:visible={visible}
         author={author}
         github_url={github_url}
         linkedin_url={linkedin_url}
         twitter_url={twitter_url}
     /> 
-    <div class="{ full ? 'content-wrapper-full' : 'content-wrapper' }">
+    <div class="{ visible ? 'content-wrapper' : 'content-wrapper-full' }">
         <slot></slot>
     </div>
 </div>
