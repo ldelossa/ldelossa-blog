@@ -33,7 +33,7 @@
     }
     .blog_title {
         margin: 10px;
-        letter-spacing: 8px;
+        letter-spacing: 6px;
         font-size: min(30px,4vmin);
     }
     a:hover {

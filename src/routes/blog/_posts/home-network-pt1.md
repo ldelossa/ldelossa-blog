@@ -1,4 +1,4 @@
-# A Minimal Home Network Pt 1
+# Building A Home Lab With Podman - Pt1
 
 *Checkout [Part 2](/blog/home-network-pt2) For Application Routing*
 
@@ -16,7 +16,7 @@ This post introduces network topology, components which make up the network, and
 
 * Podman - a daemonless container runtime that works well with SystemD
 * CoreDNS - a DNS server that uses a ton of plugins to implement name resolution.
-* NetData - a C monitoring daemon which scraps /proc for every metric you can think of.
+* NetData - a C monitoring daemon which scrapes /proc for every metric you can think of.
 * Traefik - a service routing solution which supports path routing, redirects, and load balancing.
 * Fedora32 - good ol' fedora linux as a host operating system (shameless plug).
 

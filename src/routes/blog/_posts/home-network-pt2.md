@@ -1,4 +1,4 @@
-# A Minimal Home Network Pt 2
+# Building A Home Lab With Podman - Pt2
 
 In [Part 1](/blog/home-network-pt1) of this series I explain the desire to create a minimal home network running on containers, the stack being used to accomplish this, and how name resolution will work.
 

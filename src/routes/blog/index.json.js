@@ -3,7 +3,7 @@
 export const index = [
   {
       date: "2020-07-03",
-      title: "A Minimal Home Network Pt2",
+      title: "Building A Home Lab With Podman - Pt2",
       desc: "Application routing is introduced into the home lab",
       file: "home-network-pt2"
   },
@@ -15,8 +15,8 @@ export const index = [
   },
   {
       date: "2020-06-14",
-      title: "A Minimal Home Network Pt1",
-      desc: "I introduce my new minimal home network powered by containers",
+      title: "Building A Home Lab With Podman - Pt1",
+      desc: "Learn how Podman can be used to create a home lab newtork and name resolution.",
       file: "home-network-pt1"
   },
 ]
