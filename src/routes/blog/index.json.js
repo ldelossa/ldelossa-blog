@@ -2,6 +2,12 @@
 // other javascript apis 
 export const index = [
   {
+      date: "2020-07-11",
+      title: "The Good with The Bad: Go's net/url.URL and JSON",
+      desc: "Why seemingly inconvenient approaches lead to value in the long run.",
+      file: "go-url-encoding"
+  },
+  {
       date: "2020-07-03",
       title: "Building A Home Lab With Podman - Pt2",
       desc: "Application routing is introduced into the home lab",
