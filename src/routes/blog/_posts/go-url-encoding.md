@@ -39,7 +39,7 @@ func (wh *Webhook) UnmarshalJSON(b []byte) error {
 		return err
 	}
 	if _, ok := m["notification_id"]; !ok {
-		return fmt.Errorf("json unmarshal failed. webhook requires a \"notificaiton_id\" field")
+		return fmt.Errorf("json unmarshal failed. webhook requires a \"notification_id\" field")
 	}
 	if _, ok := m["callback"]; !ok {
 		return fmt.Errorf("json unmarshal failed. webhook requires a \"callback\" field")
