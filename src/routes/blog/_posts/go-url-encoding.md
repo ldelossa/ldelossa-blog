@@ -1,4 +1,4 @@
-# The Good with The Bad: Go's net/url.URL and JSON
+# The Good With The Bad: Go's net/url.URL and JSON
 
 A rather common task presented itself while working on [Clair](https://github.com/quay/clair) this week.
 

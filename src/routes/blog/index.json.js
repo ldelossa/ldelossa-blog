@@ -3,7 +3,7 @@
 export const index = [
   {
       date: "2020-07-11",
-      title: "The Good with The Bad: Go's net/url.URL and JSON",
+      title: "The Good With The Bad: Go's net/url.URL and JSON",
       desc: "Why seemingly inconvenient approaches lead to value in the long run.",
       file: "go-url-encoding"
   },
