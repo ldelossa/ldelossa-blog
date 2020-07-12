@@ -92,7 +92,7 @@ Service A is rebuilt in Go 1.14.
 
 When service A receives the "net/url.URL" it will receive json similar to:
 ```json
-"url": {"Scheme":"http","Opaque":"","User":null,"Host":"www.google.com","Path":"","RawPath":"","ForceQuery":false,"RawQuery":"","Fragment":""}
+{"url": {"Scheme":"http","Opaque":"","User":null,"Host":"www.google.com","Path":"","RawPath":"","ForceQuery":false,"RawQuery":"","Fragment":""}}
 ```
 
 When service B receives the "net/url.URL" it will receive json similar to:
