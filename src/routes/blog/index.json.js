@@ -2,6 +2,12 @@
 // other javascript apis 
 export const index = [
   {
+      date: "2020-07-16",
+      title: "Sequential Consistency In Practice",
+      desc: "Clarification on sequential consistency and distributed system",
+      file: "sequential-consistency-in-practice"
+  },
+  {
       date: "2020-07-11",
       title: "The Good With The Bad: Go's net/url.URL and JSON",
       desc: "Why seemingly inconvenient approaches lead to value in the long run.",
