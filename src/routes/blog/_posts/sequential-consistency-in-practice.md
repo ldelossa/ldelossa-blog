@@ -82,5 +82,5 @@ In the practice of designing distributed systems sequential consistency requires
 
 When "sequential consistency" is mentioned in regards to a distributed system what is usually being expressed is the ability for processors to "lag" behind observing changes, but eventually seeing all changes in a well defined total order.
 
-A secondary mechanism, whether a dedicated process, vector clocks, or fence id, must be present to enforce each process sees a totally ordered sequence of events.
+A secondary mechanism, whether a dedicated process, vector clocks, or fence id, must be present to enforce that each process sees a totally ordered sequence of events.
 
