@@ -26,7 +26,7 @@ In short recap:
 
 
   Valid:  W(x),W(z),W(y)
-          W(y),W(z),W(y)
+          W(y),W(x),W(z)
 
 Invalid:  W(z),W(x),W(Y)
 ```
