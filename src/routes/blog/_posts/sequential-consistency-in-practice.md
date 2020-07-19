@@ -27,6 +27,7 @@ In short recap:
 
   Valid:  W(x),W(z),W(y)
           W(y),W(x),W(z)
+          W(x),W(y),W(z)
 
 Invalid:  W(z),W(x),W(Y)
 ```
@@ -84,3 +85,6 @@ When "sequential consistency" is mentioned in regards to a distributed system wh
 
 A secondary mechanism, whether a dedicated process, vector clocks, or fence id, must be present to enforce that each process sees a totally ordered sequence of events.
 
+---
+edits:
+- fix on valid sequential interleavings in first example.
