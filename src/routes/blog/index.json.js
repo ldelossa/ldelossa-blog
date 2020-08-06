@@ -2,6 +2,12 @@
 // other javascript apis 
 export const index = [
   {
+      date: "2020-08-06",
+      title: "Git Worktree Flow",
+      desc: "A workflow for keeping clean commit histories",
+      file: "git-worktree-flow"
+  },
+  {
       date: "2020-07-16",
       title: "Sequential Consistency In Practice",
       desc: "Clarification on sequential consistency and distributed system",
