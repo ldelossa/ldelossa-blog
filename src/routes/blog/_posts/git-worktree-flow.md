@@ -12,7 +12,7 @@ In this post I will share a new workflow utilizing Git's worktree feature that h
 
 # The Scenario
 
-A repository exists and a topic branch is checked out and being worked on.
+A repository exists, a topic branch is checked out, and it is complete.
 
 ```
 ❯ git log
@@ -49,7 +49,7 @@ This approach is reasonable but wouldn't it be nice to keep the well organized c
 
 # Worktree To The Rescue
 
-A Git worktree allows the same repository to exist in multiple file system directories as once.
+A Git worktree allows the same repository to exist in multiple file system directories at once.
 
 The worktree repository can have any branch checked out including a new one.
 
@@ -65,7 +65,7 @@ HEAD is now at 2d27894 implement plumbing
 ❯ cd ../myrepo-pr-changes
 ```
 
-The command displayed above creates the worktree directory "my-pr-changes" one directory above our current, creates the branch "myrepo-pr-changes", and check this branch out in the worktree.
+The command displayed above creates the worktree directory "myrepo-pr-changes" one directory above our current, creates the branch "myrepo-pr-changes", and check this branch out in the worktree.
 
 The branch "myrepo-pr-changes" will be a staging area where the changes required to pass the code review can be implemented.
 
