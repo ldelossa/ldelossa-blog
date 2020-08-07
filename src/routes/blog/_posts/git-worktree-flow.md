@@ -14,8 +14,8 @@ In this post I will share a new workflow utilizing Git's worktree feature that h
 
 A repository exists, a topic branch is checked out, and it is complete.
 
-```
-❯ git log
+```shell
+$ git log
 commit 2d27894d5f6876ae456470f59a21bbd77184a853 (HEAD -> topic-branch)
 Author: louis <louis@localhost.localdomain>
 Date:   Thu Aug 6 16:02:10 2020 -0400
@@ -55,14 +55,12 @@ The worktree repository can have any branch checked out including a new one.
 
 To handle the code review changes but keep our commit structure the same a worktree can be created.
 
-```
-~/git/scrap/myrepo topic-branch
-❯ git worktree add ../myrepo-pr-changes
+```shell
+$ git worktree add ../myrepo-pr-changes
 Preparing worktree (new branch 'myrepo-pr-changes')
 HEAD is now at 2d27894 implement plumbing
 
-~/git/scrap/myrepo topic-branch
-❯ cd ../myrepo-pr-changes
+$ cd ../myrepo-pr-changes
 ```
 
 The command displayed above creates the worktree directory "myrepo-pr-changes" one directory above our current, creates the branch "myrepo-pr-changes", and check this branch out in the worktree.
@@ -79,8 +77,8 @@ It is time to get these changes back into the topic branch.
 
 We can diff the code between "topic-branch" and "myrepo-pr-change" worktree branch.
 
-```
-❯ git diff --name-only topic-branch myrepo-pr-changes
+```shell
+$ git diff --name-only topic-branch myrepo-pr-changes
 businesslogic.go
 plumbing.go
 store.go
@@ -90,12 +88,10 @@ The diff shows that specific files have changed in order to appease our code rev
 
 An interactive rebase can get these changes into the correct commits by returning to the original repository directory.
 
-```
-~/git/scrap/myrepo topic-branch 36s
-❯ cd ../myrepo        
+```shell
+$ cd ../myrepo        
 
-~/git/scrap/myrepo topic-branch
-❯ git rebase -i HEAD~2
+$ git rebase -i HEAD~2
 
 ```
 
@@ -103,8 +99,8 @@ Next the interactive prompt is displayed
 
 By specifying "edit" in one of our commits the changes present in the diff between "topic-branch" and "myrepo-pr-changes" can be checked out.
 
-```
-❯ git rebase -i HEAD~2
+```shell
+$ git rebase -i HEAD~2
 Stopped at 1cecb9d...  implement business logic
 You can amend the commit now, with
 
@@ -114,11 +110,14 @@ Once you are satisfied with your changes, run
 
   git rebase --continue
 
-~/git/scrap/myrepo topic-branch|rebase-i* ≡
-❯ git checkout myrepo-pr-changes -- businesslogic.go
+```
 
-~/git/scrap/myrepo topic-branch|rebase-i* ≡
-❯ git status
+```shell
+$ git checkout myrepo-pr-changes -- businesslogic.go
+```
+
+```shell
+$ git status
 interactive rebase in progress; onto abff991
 Last command done (1 command done):
    edit 1cecb9d implement business logic
@@ -132,12 +131,14 @@ You are currently editing a commit while rebasing branch 'topic-branch' on 'abff
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
     modified:   businesslogic.go
+```
 
-~/git/scrap/myrepo topic-branch|rebase-i* ≡
-❮ git commit --amend
+```shell
+$ git commit --amend
+```
 
-~/git/scrap/myrepo topic-branch|rebase-i* ≡
-❯ git rebase --continue
+```shell
+$ git rebase --continue
 Successfully rebased and updated refs/heads/topic-branch.
 ```
 
