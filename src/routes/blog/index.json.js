@@ -2,6 +2,12 @@
 // other javascript apis 
 export const index = [
   {
+      date: "2020-9-15",
+      title: "Optimizing PGX Allocations in Golang with Pprof.",
+      desc: "An example utilizing pprof for some impressive allocation reductions in the PGX sql library.",
+      file: "allocation_optimization_in_go"
+  },
+  {
       date: "2020-08-06",
       title: "Git Worktree Flow",
       desc: "A workflow for keeping clean commit histories",
