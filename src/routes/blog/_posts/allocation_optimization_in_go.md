@@ -144,16 +144,16 @@ Lets generate a graph of our call stack and associated allocations.
 ❯ go tool pprof -svg distlock.test memprofile.out
 ```
 
-![photo of high pgx allocations](/profile001.png)
+![photo of high PGX allocations](/profile001.png)
 
-The above diagram is showing a large amount of allocations in pgx's getRows method. 
+The above diagram is showing a large amount of allocations in PGX's getRows method. 
 Its not rare for methods dealing with serialization to and from the database to allocate heavily.
 But it would be nice if we could eliminate this.
 
 Getting a session pg advisory lock typically looks like this.
 ```
-SELECT pg_try_advisory_lock(14);
-SELECT pg_advisory_unlock(14);
+SELECT pg_try_advisory_lock($1);
+SELECT pg_advisory_unlock($1);
 ```
 
 Both lock functions return a table expression resulting in a true or a false. 
@@ -169,10 +169,10 @@ SELECT lock FROM pg_advisory_unlock($1) lock WHERE lock = true;
 
 A slight modification allows us to only return rows if the lock function returns true.
 
-The next step is to short circuit the pgx library from reading the rows. 
+The next step is to short circuit the PGX library from reading the rows. 
 This took a bit of library spelunking but I eventually discovered this...
 
-```
+```go
 rr := m.conn.PgConn().ExecParams(ctx,
     trySessionUnlock,
     [][]byte{
@@ -195,7 +195,7 @@ The command tag tells us if any rows were affected by the exec. This effectively
 
 Let's take a new 1 minute memory profile to see how this effects our heap.
 
-![photo of high pgx allocations](/profile002.png)
+![photo of high PGX allocations](/profile002.png)
 
 Notice the large improvement achieved.
 
@@ -204,7 +204,7 @@ We can also compare the benchmark output.
 ```
 85149            890605 ns/op            1288 B/op         21 allocs/op
 ```
-Where pgx was reading the rows.
+Where PGX was reading the rows.
 
 ```
 58051           1238353 ns/op             517 B/op         11 allocs/op
