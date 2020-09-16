@@ -111,7 +111,7 @@ func (p *reqPool) Put(r request) {
 ```
 
 The above illustrates a simple channel implemented pool.
-The first implementation was a simple sync.Pool.
+The first implementation was a sync.Pool.
 After further profiling however implementing our own proved to be easier on the heap.
 
 After plumbing the requst pool into the rest of the code pprof reports a much nicer result.
@@ -216,6 +216,6 @@ By eliminating the reading of rows we perform many more cycles and cut our alloc
 
 Is it worth to dig this deep into your allocations? Depends.
 If you know the code you are writing will be in the "hot-path" its empowering to know what your allocation profile looks like.
-Learning the skills to performance tune is addicting and powerful but writing code that can be read and maintain should always be the first goal.
+Learning the skills to performance tune is addicting and powerful but writing code that can be read and easily maintained should always be the first goal.
 That being said I do think every engineer should go down the rabbit hole at least once. Its a lot of fun.
 
