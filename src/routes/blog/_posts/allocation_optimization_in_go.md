@@ -13,7 +13,7 @@ I'd like to shout out *Kale Blanekship* and *Eric Chlebek* from the performance 
 
 The code that's being profiled is a new distributed lock implementation for [ClairCore](https://github.com/quay/claircore/). 
 Postgres is the only required infrastructure for ClairCore by design.
-While it's not the best mechanim for a distributed lock [advisory locks](https://www.postgresql.org/docs/9.1/explicit-locking.html) can be utilized to get *mostly* there.
+While it's not the best mechanim for a distributed lock, [postgres advisory locks](https://www.postgresql.org/docs/9.1/explicit-locking.html) can be utilized to get *mostly* there.
 
 You can view the distlock implementation [here](https://github.com/ldelossa/distlock)
 
