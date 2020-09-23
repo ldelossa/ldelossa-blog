@@ -2,6 +2,12 @@
 // other javascript apis 
 export const index = [
   {
+      date: "2020-9-22",
+      title: "The Absolute Minimum Every Software Developer Must Know About Cryptography",
+      desc: "What every developer should know about crytography to make their lifes easier.",
+      file: "absolute-minimum-cryptography"
+  },
+  {
       date: "2020-9-15",
       title: "Optimizing PGX Allocations in Golang with Pprof.",
       desc: "An example utilizing pprof for some impressive allocation reductions in the PGX sql library.",
