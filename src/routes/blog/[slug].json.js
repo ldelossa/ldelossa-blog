@@ -13,10 +13,14 @@ const md = require('markdown-it')({
 
     return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
   }
-});const fs = require('fs');
+});
+const fs = require('fs');
 const path = require('path');
 const cwd = process.cwd();
 const posts_dir = path.join(cwd, 'src/routes/blog/_posts/')
+
+// md.use(require("markdown-it-anchor")); // Optional, but makes sense as you really want to link to something
+md.use(require("markdown-it-table-of-contents"));
 
 export async function get(req, res, next) {
 	res.setHeader('Content-Type', 'application/json');

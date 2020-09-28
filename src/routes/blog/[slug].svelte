@@ -21,7 +21,7 @@
     }
 	.markdown-body {
 		min-width: 100px;
-		max-width: 700px;
+		max-width: 900px;
 		margin: 0 auto;
 		padding: 45px;
         color: #e9f1f7;
