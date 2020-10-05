@@ -2,6 +2,12 @@
 // other javascript apis 
 export const index = [
   {
+      date: "2020-10-5",
+      title: "Flashing QMK Firmware With The Help Of Docker",
+      desc: "We explore a way to self-contain QMK dependencies use for flashing popular DIY keyboards.",
+      file: "qmk-docker"
+  },
+  {
       date: "2020-9-22",
       title: "The Absolute Minimum Every Software Developer Must Know About Cryptography",
       desc: "What every developer should know about crytography to make their lifes easier.",
